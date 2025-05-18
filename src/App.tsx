@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Experience from "./components/Experience";
+// import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -37,8 +37,15 @@ function App() {
 
   // SEO modifications
   useEffect(() => {
+    // Constants for consistent values
+    const SITE_DOMAIN = "https://churchill-daniel.vercel.app/";
+    const PORTFOLIO_IMAGE = `${SITE_DOMAIN}/images/profile2.jpeg`;
+    const NAME = "Churchill Daniel";
+    const DESCRIPTION =
+      "Software developer specializing in React, NestJS, Express and modern TypeScript applications with a focus on performance and user experience.";
+
     // Update title
-    document.title = "Daniel Churchill | Software Developer";
+    document.title = `${NAME} | Software Developer`;
 
     // Add meta description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -47,10 +54,7 @@ function App() {
       metaDescription.setAttribute("name", "description");
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute(
-      "content",
-      "Churchill Daniel is a Software developer specializing in creating beautiful, functional, and user-friendly web applications using React and modern JavaScript."
-    );
+    metaDescription.setAttribute("content", DESCRIPTION);
 
     // Add keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -61,41 +65,37 @@ function App() {
     }
     metaKeywords.setAttribute(
       "content",
-      "Software developer, web developer, react developer, NestJs,ExpressJs,PostgreSQL,Prisma, typescript, churchill, daniel"
+      "Software developer, web developer, React developer, NestJS, ExpressJS, PostgreSQL, Prisma, TypeScript, Churchill, Daniel"
     );
 
     // Add social tags
     const metaTags = [
       {
         property: "og:title",
-        content: "Daniel Churchill | Software Developer",
+        content: `${NAME} | Software Developer`,
       },
       {
         property: "og:description",
-        content:
-          "Frontend developer specializing in React and modern JavaScript applications",
+        content: DESCRIPTION,
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://chukwunonsoprosper.live" },
+      { property: "og:url", content: SITE_DOMAIN },
       {
         property: "og:image",
-        content:
-          "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        content: PORTFOLIO_IMAGE,
       },
       { property: "twitter:card", content: "summary_large_image" },
       {
         property: "twitter:title",
-        content: "Prosper Chukwunonso | Frontend Developer",
+        content: `${NAME} | Software Developer`,
       },
       {
         property: "twitter:description",
-        content:
-          "Frontend developer specializing in React and modern JavaScript applications",
+        content: DESCRIPTION,
       },
       {
         property: "twitter:image",
-        content:
-          "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        content: PORTFOLIO_IMAGE,
       },
     ];
 
@@ -116,7 +116,7 @@ function App() {
       canonicalLink.setAttribute("rel", "canonical");
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute("href", "https://chukwunonsoprosper.live");
+    canonicalLink.setAttribute("href", SITE_DOMAIN);
   }, []);
 
   return (
