@@ -14,7 +14,7 @@ const About: React.FC = () => {
               <div className="relative w-64 h-64 mx-auto">
                 <div className="absolute inset-0 bg-blue-600 rounded-lg transform translate-x-3 translate-y-3"></div>
                 <img
-                  src="../../public/profile2.jpeg"
+                  src="/public/images/profile2.jpeg"
                   alt="Churchill Daniel"
                   className="relative z-10 w-full h-full object-cover rounded-lg shadow-lg"
                 />
