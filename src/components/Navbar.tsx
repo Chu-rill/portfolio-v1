@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
-import { navLinks } from '../data';
+import React, { useState, useEffect } from "react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { navLinks } from "../data";
 
 interface NavbarProps {
   darkMode: boolean;
@@ -24,22 +24,25 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav 
+    <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white dark:bg-gray-900 shadow-md py-2' 
-          : 'bg-transparent py-4'
+        scrolled
+          ? "bg-white dark:bg-gray-900 shadow-md py-2"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-            PC
+          <a
+            href="#home"
+            className="text-2xl font-bold text-blue-600 dark:text-blue-400"
+          >
+            CD
           </a>
 
           {/* Desktop Navigation */}
@@ -59,7 +62,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             <button
               onClick={toggleDarkMode}
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
-              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={
+                darkMode ? "Switch to light mode" : "Switch to dark mode"
+              }
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
@@ -70,14 +75,16 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             <button
               onClick={toggleDarkMode}
               className="text-gray-700 dark:text-gray-300"
-              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={
+                darkMode ? "Switch to light mode" : "Switch to dark mode"
+              }
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <button
               onClick={toggleMenu}
               className="text-gray-700 dark:text-gray-300"
-              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

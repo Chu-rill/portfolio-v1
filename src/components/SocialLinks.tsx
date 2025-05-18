@@ -1,12 +1,19 @@
-import React from 'react';
-import { socialLinks } from '../data';
-import * as LucideIcons from 'lucide-react';
+import React from "react";
+import { socialLinks } from "../data";
+import * as LucideIcons from "lucide-react";
 
 const SocialLinks: React.FC = () => {
   return (
     <div className="flex items-center justify-center space-x-6">
       {socialLinks.map((link) => {
-        const IconComponent = LucideIcons[link.icon as keyof typeof LucideIcons];
+        // Fixed TypeScript error by properly typing the IconComponent
+        const IconComponent =
+          link.icon in LucideIcons
+            ? (LucideIcons[
+                link.icon as keyof typeof LucideIcons
+              ] as React.ComponentType<{ size?: number; className?: string }>)
+            : null;
+
         return (
           <a
             key={link.name}

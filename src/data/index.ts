@@ -11,22 +11,22 @@ export const navLinks: NavLink[] = [
 export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/chukwunonsoprosper",
+    url: "https://github.com/Chu-rill",
     icon: "Github",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/chukwunonsoprosper",
+    url: "https://www.linkedin.com/in/churchill-daniel-b66a752a7/",
     icon: "Linkedin",
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/chukwunonsoprosper",
+    url: "https://x.com/chu_rill",
     icon: "Twitter",
   },
   {
     name: "Email",
-    url: "mailto:contact@chukwunonsoprosper.live",
+    url: "mailto:churchilldaniel687@gmail.com",
     icon: "Mail",
   },
 ];
@@ -44,6 +44,23 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    title: "Recapify",
+    description:
+      "A text transformation tool that allows users to summarize, paraphrase, and generate text using Gemini API and a TTS audio file that is download able. It features a user-friendly interface built with React and TailwindCSS.",
+    image: "../../public/project1.png",
+    tags: [
+      "REACT",
+      "NestJs",
+      "PostgreSQL",
+      "Gemini",
+      "Unrealspeech",
+      "TypeScript",
+    ],
+    demoLink: "https://recapify-omega.vercel.app/",
+    codeLink: "https://github.com/Chu-rill/Recapify",
+  },
+  {
+    id: 3,
     title: "ChatSpace",
     description:
       "A real-time full-stack chat application using React, Express, and MongoDB, featuring serverless functions hosted on Google Cloud.",
@@ -51,16 +68,6 @@ export const projects: Project[] = [
     tags: ["REACT", "EXPRESS", "MONGODB", "SOCKET.IO"],
     demoLink: "https://chat-space-sand.vercel.app/",
     codeLink: "https://github.com/Chu-rill/ChatSpace",
-  },
-  {
-    id: 3,
-    title: "Conversa",
-    description:
-      "A chatbot application leveraging Google's Gemini API for intelligent conversation experiences.",
-    image: "../../public/project1.png",
-    tags: ["HTML", "CSS", "JAVASCRIPT"],
-    demoLink: "https://gdsc-chatbot.netlify.app/",
-    codeLink: "https://github.com/Chu-rill/GDSC-Ai",
   },
   {
     id: 4,
@@ -75,18 +82,102 @@ export const projects: Project[] = [
 ];
 
 export const skills: Skill[] = [
-  { id: 1, name: "HTML", icon: "Code", category: "frontend" },
-  { id: 2, name: "CSS", icon: "Paintbrush", category: "frontend" },
-  { id: 3, name: "JavaScript", icon: "FileCode", category: "frontend" },
-  { id: 4, name: "TypeScript", icon: "FileCode", category: "frontend" },
-  { id: 5, name: "React", icon: "Atom", category: "frontend" },
-  { id: 6, name: "Node.js", icon: "Server", category: "backend" },
-  { id: 7, name: "Express", icon: "Server", category: "backend" },
-  { id: 8, name: "MongoDB", icon: "Database", category: "backend" },
-  { id: 9, name: "Git", icon: "Git", category: "tools" },
-  { id: 10, name: "TailwindCSS", icon: "Palette", category: "frontend" },
-  { id: 11, name: "Redux", icon: "Layers", category: "frontend" },
-  { id: 12, name: "Firebase", icon: "Flame", category: "backend" },
+  { id: 1, name: "HTML", icon: "Code", category: "frontend", proficiency: 95 },
+  {
+    id: 2,
+    name: "CSS",
+    icon: "Paintbrush",
+    category: "frontend",
+    proficiency: 90,
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    icon: "FileCode",
+    category: "frontend",
+    proficiency: 92,
+  },
+  {
+    id: 4,
+    name: "TypeScript",
+    icon: "FileCode",
+    category: "frontend",
+    proficiency: 88,
+  },
+  { id: 5, name: "React", icon: "Atom", category: "frontend", proficiency: 90 },
+  {
+    id: 6,
+    name: "Node.js",
+    icon: "Server",
+    category: "backend",
+    proficiency: 85,
+  },
+  {
+    id: 7,
+    name: "Express",
+    icon: "Server",
+    category: "backend",
+    proficiency: 87,
+  },
+  {
+    id: 8,
+    name: "MongoDB",
+    icon: "Database",
+    category: "backend",
+    proficiency: 82,
+  },
+  {
+    id: 9,
+    name: "Git",
+    icon: "code",
+    category: "tools",
+    proficiency: 89,
+  },
+  {
+    id: 10,
+    name: "TailwindCSS",
+    icon: "Palette",
+    category: "frontend",
+    proficiency: 92,
+  },
+  // {
+  //   id: 11,
+  //   name: "Redux",
+  //   icon: "Layers",
+  //   category: "frontend",
+  //   proficiency: 84,
+  // },
+  // { id: 12, name: "Firebase", icon: "Flame", category: "backend", proficiency: 80 },
+  {
+    id: 13,
+    name: "PostgreSQL",
+    icon: "Database",
+    category: "backend",
+    proficiency: 78,
+  },
+  {
+    id: 14,
+    name: "NestJs",
+    icon: "Server",
+    category: "backend",
+    proficiency: 83,
+  },
+  {
+    id: 15,
+    name: "Prisma",
+    icon: "Database",
+    category: "backend",
+    proficiency: 80,
+  },
+  {
+    id: 16,
+    name: "Socket.IO",
+    icon: "Plug",
+    category: "backend",
+    proficiency: 79,
+  },
+  { id: 17, name: "Linux", icon: "code", category: "tools", proficiency: 75 },
+  { id: 18, name: "Jest", icon: "code", category: "tools", proficiency: 76 },
 ];
 
 export const experiences: Experience[] = [
@@ -131,10 +222,16 @@ export const experiences: Experience[] = [
 export const about = {
   name: "Churchill Daniel",
   title: "Software Developer",
-  description: `I'm a passionate software developer with experience in creating efficient, scalable, and user-friendly web applications. My expertise lies in React,NestJs and modern TypeScript, and I am dedicated to building accessible and performant solutions.`,
-  longDescription: `Driven by a fascination with technology, my journey has led to a deep commitment to developing digital solutions that have a meaningful impact. I advocate for clean, maintainable code, robust system architecture, and a culture of continuous learning and improvement.
+  description: `I'm a passionate software developer focused on building robust, user-friendly web applications with modern technologies. Specializing in fullstack development with React, NestJS, and TypeScript, I create accessible and performant digital solutions.`,
+  longDescription: `With a strong foundation in both frontend and backend technologies, I transform ideas into scalable, maintainable code. My GitHub repositories showcase my commitment to clean architecture and continuous improvement across various projects.
 
-When I'm not coding, I'm often exploring new technologies, contributing to open-source projects, or writing about my experiences on various platforms. I am always eager to tackle new challenges and collaborate on innovative projects.
+My technical journey is driven by curiosity and problem-solving. I've built applications ranging from intuitive user interfaces with React to powerful APIs with NestJS, always prioritizing code quality and user experience. My work on Recapify demonstrates my ability to implement complex features while maintaining a clean, organized codebase.
 
-Let's connect and build the future together!`,
+When not coding, I explore emerging technologies, contribute to open-source projects, and share insights about software development on social media. I'm particularly interested in system architecture, performance optimization, and creating accessible web experiences.
+
+I believe in the power of technology to solve real-world problems and am always looking for opportunities to collaborate on meaningful projects. My approach combines technical expertise with creative thinking to deliver solutions that exceed expectations.
+
+Connect with me on GitHub (@Chu-rill) to see my work or follow me on Twitter (@chu_rill) for tech insights and updates. I'm open to new challenges and excited to build the future of the web together!`,
+  github: "https://github.com/Chu-rill",
+  twitter: "https://x.com/chu_rill",
 };
