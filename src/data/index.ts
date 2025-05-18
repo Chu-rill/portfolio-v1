@@ -37,7 +37,7 @@ export const projects: Project[] = [
     title: "InnkeeperPro",
     description:
       "InnkeeperPro is a FullStack hotel management system used to view listed hotels,rooms and make booking with an admin dashboard.",
-    image: "/public/images/project4.png",
+    image: "/images/project4.png",
     tags: ["React", "NestJs", "PostgreSQL", "Tailwind", "Prisma"],
     demoLink: "https://innkeeperpro.vercel.app/",
     codeLink: "https://github.com/Chu-rill/hotel-management-client",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     title: "Recapify",
     description:
       "A text transformation tool that allows users to summarize, paraphrase, and generate text using Gemini API and a TTS audio file that is download able. It features a user-friendly interface built with React and TailwindCSS.",
-    image: "/public/images/project1.png",
+    image: "/images/project1.png",
     tags: [
       "REACT",
       "NestJs",
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     title: "ChatSpace",
     description:
       "A real-time full-stack chat application using React, Express, and MongoDB, featuring serverless functions hosted on Google Cloud.",
-    image: "/public/images/project3.png",
+    image: "/images/project3.png",
     tags: ["REACT", "EXPRESS", "MONGODB", "SOCKET.IO"],
     demoLink: "https://chat-space-sand.vercel.app/",
     codeLink: "https://github.com/Chu-rill/ChatSpace",
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     title: "Trivio",
     description:
       "A fullstack quiz application that allows users to create quizzes, answer questions from various categories. It tracks scores, provides a leaderboard, and lets users filter quizzes by category and difficulty.",
-    image: "/public/images/project7.png",
+    image: "/images/project7.png",
     tags: ["React", "MongoDB", "Express"],
     demoLink: "https://trivio-chi.vercel.app/",
     codeLink: "https://github.com/Chu-rill/Quiz_app",
