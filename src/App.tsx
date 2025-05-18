@@ -39,7 +39,7 @@ function App() {
   useEffect(() => {
     // Constants for consistent values
     const SITE_DOMAIN = "https://churchill-daniel.vercel.app/";
-    const PORTFOLIO_IMAGE = `${SITE_DOMAIN}/images/profile2.jpeg`;
+    const PORTFOLIO_IMAGE = `${SITE_DOMAIN}/profile2.jpeg`;
     const NAME = "Churchill Daniel";
     const DESCRIPTION =
       "Software developer specializing in React, NestJS, Express and modern TypeScript applications with a focus on performance and user experience.";
