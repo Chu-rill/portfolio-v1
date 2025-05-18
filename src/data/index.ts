@@ -4,7 +4,7 @@ export const navLinks: NavLink[] = [
   { name: "Home", url: "#home" },
   { name: "About", url: "#about" },
   { name: "Projects", url: "#projects" },
-  // { name: 'Experience', url: '#experience' },
+  { name: "Experience", url: "#experience" },
   { name: "Contact", url: "#contact" },
 ];
 
@@ -183,40 +183,38 @@ export const skills: Skill[] = [
 export const experiences: Experience[] = [
   {
     id: 1,
-    role: "Senior Frontend Developer",
-    company: "Tech Innovations Inc.",
-    period: "Jan 2022 - Present",
+    role: "Backend Developer",
+    company: "Melcom eX (Startup)",
+    period: "June 2024 - Present",
     description: [
-      "Led a team of 5 developers in building and maintaining multiple web applications",
-      "Implemented modern UI/UX designs using React and TailwindCSS",
-      "Optimized application performance, resulting in a 40% reduction in load time",
-      "Collaborated with design and backend teams to ensure seamless integration",
+      "Collaborating with developers to build and optimize backend infrastructure",
+      "Designed and Deployed Application programming interface (API)",
+      "Working on scalable backend solutions for startup projects",
     ],
   },
   {
     id: 2,
-    role: "Frontend Developer",
-    company: "Digital Solutions LLC",
-    period: "Mar 2020 - Dec 2021",
+    role: "Core Team Member",
+    company: "Google Developer Group on Campus (GDGOC) - University of Ilorin",
+    period: "September 2024 - Present",
     description: [
-      "Developed responsive web applications using React and TypeScript",
-      "Implemented state management solutions using Redux and Context API",
-      "Created reusable component libraries for increased development efficiency",
-      "Participated in code reviews and mentored junior developers",
+      "Collaborating with developers to build the website for our events (Build with AI)",
+      "Organize technical workshops and events",
+      "Contributing to the developer community growth on campus",
     ],
   },
-  {
-    id: 3,
-    role: "Web Developer Intern",
-    company: "StartUp Ventures",
-    period: "Jun 2019 - Feb 2020",
-    description: [
-      "Assisted in developing and maintaining company websites",
-      "Created responsive layouts using HTML, CSS, and JavaScript",
-      "Collaborated with senior developers on feature implementation",
-      "Participated in daily stand-ups and sprint planning meetings",
-    ],
-  },
+  // {
+  //   id: 3,
+  //   role: "Web Developer Intern",
+  //   company: "StartUp Ventures",
+  //   period: "Jun 2019 - Feb 2020",
+  //   description: [
+  //     "Assisted in developing and maintaining company websites",
+  //     "Created responsive layouts using HTML, CSS, and JavaScript",
+  //     "Collaborated with senior developers on feature implementation",
+  //     "Participated in daily stand-ups and sprint planning meetings",
+  //   ],
+  // },
 ];
 
 export const about = {

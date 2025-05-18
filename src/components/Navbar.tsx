@@ -15,6 +15,13 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to handle resume download/view
+  const handleResumeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    // Try to open the resume in a new tab
+    window.open("/Resume.pdf", "_blank");
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -58,6 +65,16 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
                   </a>
                 </li>
               ))}
+              {/* Desktop Navigation Resume Link */}
+              <li>
+                <a
+                  href="/Resume.pdf"
+                  onClick={handleResumeClick}
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
             <button
               onClick={toggleDarkMode}
@@ -108,6 +125,19 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
                   </a>
                 </li>
               ))}
+              {/* Mobile Navigation Resume Link */}
+              <li>
+                <a
+                  href="/Resume.pdf"
+                  onClick={(e) => {
+                    handleResumeClick(e);
+                    setIsMenuOpen(false);
+                  }}
+                  className="block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center"
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>
