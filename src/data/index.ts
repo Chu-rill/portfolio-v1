@@ -178,6 +178,20 @@ export const skills: Skill[] = [
   },
   { id: 17, name: "Linux", icon: "code", category: "tools", proficiency: 75 },
   { id: 18, name: "Jest", icon: "code", category: "tools", proficiency: 76 },
+  {
+    id: 19,
+    name: "Go",
+    icon: "FileCode",
+    category: "backend",
+    proficiency: 20,
+  },
+  {
+    id: 20,
+    name: "PHP",
+    icon: "FileCode",
+    category: "backend",
+    proficiency: 30,
+  },
 ];
 
 export const experiences: Experience[] = [
