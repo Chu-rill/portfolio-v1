@@ -79,6 +79,16 @@ export const projects: Project[] = [
     demoLink: "https://trivio-chi.vercel.app/",
     codeLink: "https://github.com/Chu-rill/Quiz_app",
   },
+  {
+    id: 5,
+    title: "StoryNest",
+    description:
+      "StoryNest is a modern social blogging platform that enables users to share stories, experiences, and engage with a community of writers and readers.",
+    image: "/images/project2.png",
+    tags: ["React", "MongoDB", "Express", "Cloudinary"],
+    demoLink: "https://story-nest-mu.vercel.app/",
+    codeLink: "https://github.com/Chu-rill/StoryNest",
+  },
 ];
 
 export const skills: Skill[] = [
