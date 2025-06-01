@@ -42,11 +42,9 @@ const Skills: React.FC = () => {
                             }>)
                           : null;
 
-                      const proficiency = skill.proficiency || 75; // Fallback value
-
                       return (
                         <div key={skill.id} className="group relative">
-                          <div className="flex items-center mb-1.5">
+                          <div className="flex items-center">
                             {IconComponent && (
                               <IconComponent
                                 size={20}
@@ -56,23 +54,6 @@ const Skills: React.FC = () => {
                             <span className="text-gray-800 dark:text-gray-200 font-medium">
                               {skill.name}
                             </span>
-                            <span className="ml-auto text-sm text-gray-500 dark:text-gray-400">
-                              {proficiency}%
-                            </span>
-                          </div>
-
-                          {/* Progress bar background */}
-                          <div className="h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
-                            {/* Progress bar indicator */}
-                            <div
-                              className="h-full bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-500 ease-out group-hover:opacity-90"
-                              style={{ width: `${proficiency}%` }}
-                            >
-                              {/* Animated pulse effect on hover */}
-                              {/* <div className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-1000">
-                                <div className="h-full w-full bg-white opacity-20 rounded-full"></div>
-                              </div> */}
-                            </div>
                           </div>
                         </div>
                       );

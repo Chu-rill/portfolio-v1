@@ -56,7 +56,7 @@ export const projects: Project[] = [
       "Unrealspeech",
       "TypeScript",
     ],
-    demoLink: "https://recapify-omega.vercel.app/",
+    // demoLink: "https://recapify-omega.vercel.app/",
     codeLink: "https://github.com/Chu-rill/Recapify",
   },
   {
