@@ -12,8 +12,7 @@ export interface Skill {
   id: number;
   name: string;
   icon: string;
-  category: "frontend" | "backend" | "tools" | "other" | "wrench";
-  proficiency: number;
+  category: "language" | "framework" | "tools" | "other" | "wrench";
 }
 
 export interface SocialLink {

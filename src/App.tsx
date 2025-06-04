@@ -40,7 +40,7 @@ function App() {
     // Constants for consistent values
     const SITE_DOMAIN = "https://churchill-daniel.vercel.app/";
     const PORTFOLIO_IMAGE = `${SITE_DOMAIN}/profile2.jpeg`;
-    const NAME = "Churchill Daniel";
+    const NAME = "Churchill Daniel Rimamskep";
     const DESCRIPTION =
       "Software developer specializing in React, NestJS, Express and modern TypeScript applications with a focus on performance and user experience.";
 
@@ -65,7 +65,7 @@ function App() {
     }
     metaKeywords.setAttribute(
       "content",
-      "Software developer, web developer, React developer, NestJS, ExpressJS, PostgreSQL, Prisma, TypeScript, Churchill, Daniel"
+      "Software developer, web developer, React developer, NestJS, ExpressJS, PostgreSQL, Prisma, TypeScript, Churchill, Daniel,Rimamskep, portfolio, personal website, frontend developer, backend developer, fullstack developer"
     );
 
     // Add social tags
