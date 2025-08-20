@@ -1,35 +1,72 @@
+export interface Profile {
+  name: string;
+  role: string;
+  location: string;
+  tagline: string;
+  bio: string;
+  email: string;
+  phone?: string;
+  availability: string;
+  yearsExperience: number;
+  image?: string;
+  resume?: string;
+  socials: {
+    github?: string;
+    linkedin?: string;
+    x?: string;
+    discord?: string;
+    website?: string;
+  };
+}
+
 export interface Project {
-  id: number;
+  id: string;
   title: string;
   description: string;
-  image: string;
+  longDescription?: string;
   tags: string[];
-  demoLink?: string;
-  codeLink?: string;
+  image?: string;
+  links: {
+    demo?: string;
+    github?: string;
+    live?: string;
+  };
+  featured: boolean;
+  status: "completed" | "in-progress" | "planned";
+}
+
+export interface Experience {
+  id: string;
+  role: string;
+  company: string;
+  location?: string;
+  type: "full-time" | "part-time" | "contract" | "internship" | "freelance";
+  startDate: string;
+  endDate?: string; // null means current position
+  current: boolean;
+  highlights: string[];
+  technologies?: string[];
+  companyUrl?: string;
 }
 
 export interface Skill {
-  id: number;
   name: string;
-  icon: string;
-  category: "language" | "framework" | "tools" | "other" | "wrench";
+  category: "frontend" | "backend" | "database" | "tools" | "languages" | "frameworks";
+  level: "beginner" | "intermediate" | "advanced" | "expert";
+  icon?: string;
+  color?: string;
+}
+
+export interface ContactForm {
+  name: string;
+  email: string;
+  message: string;
+  subject?: string;
 }
 
 export interface SocialLink {
   name: string;
   url: string;
   icon: string;
-}
-
-export interface NavLink {
-  name: string;
-  url: string;
-}
-
-export interface Experience {
-  id: number;
-  role: string;
-  company: string;
-  period: string;
-  description: string[];
+  color?: string;
 }

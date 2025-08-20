@@ -1,0 +1,128 @@
+[
+  {
+    "name": "React",
+    "category": "frontend",
+    "level": "expert",
+    "icon": "react",
+    "color": "#61DAFB"
+  },
+  {
+    "name": "TypeScript",
+    "category": "languages",
+    "level": "expert",
+    "icon": "typescript",
+    "color": "#3178C6"
+  },
+  {
+    "name": "JavaScript",
+    "category": "languages",
+    "level": "expert",
+    "icon": "javascript",
+    "color": "#F7DF1E"
+  },
+  {
+    "name": "Node.js",
+    "category": "backend",
+    "level": "advanced",
+    "icon": "nodejs",
+    "color": "#339933"
+  },
+  {
+    "name": "Next.js",
+    "category": "frameworks",
+    "level": "advanced",
+    "icon": "nextjs",
+    "color": "#000000"
+  },
+  {
+    "name": "Vue.js",
+    "category": "frontend",
+    "level": "intermediate",
+    "icon": "vue",
+    "color": "#4FC08D"
+  },
+  {
+    "name": "Tailwind CSS",
+    "category": "frontend",
+    "level": "expert",
+    "icon": "tailwind",
+    "color": "#06B6D4"
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "database",
+    "level": "advanced",
+    "icon": "postgresql",
+    "color": "#336791"
+  },
+  {
+    "name": "MongoDB",
+    "category": "database",
+    "level": "intermediate",
+    "icon": "mongodb",
+    "color": "#47A248"
+  },
+  {
+    "name": "AWS",
+    "category": "tools",
+    "level": "intermediate",
+    "icon": "aws",
+    "color": "#FF9900"
+  },
+  {
+    "name": "Docker",
+    "category": "tools",
+    "level": "intermediate",
+    "icon": "docker",
+    "color": "#2496ED"
+  },
+  {
+    "name": "Git",
+    "category": "tools",
+    "level": "expert",
+    "icon": "git",
+    "color": "#F05032"
+  },
+  {
+    "name": "Python",
+    "category": "languages",
+    "level": "intermediate",
+    "icon": "python",
+    "color": "#3776AB"
+  },
+  {
+    "name": "Express.js",
+    "category": "backend",
+    "level": "advanced",
+    "icon": "express",
+    "color": "#000000"
+  },
+  {
+    "name": "GraphQL",
+    "category": "backend",
+    "level": "intermediate",
+    "icon": "graphql",
+    "color": "#E10098"
+  },
+  {
+    "name": "Redis",
+    "category": "database",
+    "level": "beginner",
+    "icon": "redis",
+    "color": "#DC382D"
+  },
+  {
+    "name": "Figma",
+    "category": "tools",
+    "level": "intermediate",
+    "icon": "figma",
+    "color": "#F24E1E"
+  },
+  {
+    "name": "Prisma",
+    "category": "backend",
+    "level": "intermediate",
+    "icon": "prisma",
+    "color": "#2D3748"
+  }
+]

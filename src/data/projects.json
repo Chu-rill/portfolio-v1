@@ -1,0 +1,69 @@
+[
+  {
+    "id": "ecommerce-platform",
+    "title": "E-commerce Platform",
+    "description": "A modern, full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include real-time inventory management, payment processing, and an admin dashboard.",
+    "longDescription": "This comprehensive e-commerce solution handles everything from product management to order fulfillment. Built with scalability in mind, it can handle thousands of concurrent users and processes payments securely through Stripe integration.",
+    "tags": ["React", "Node.js", "PostgreSQL", "TypeScript", "Stripe", "AWS"],
+    "image": "/projects/ecommerce.jpg",
+    "links": {
+      "demo": "https://demo-ecommerce.example.com",
+      "github": "https://github.com/yourname/ecommerce-platform",
+      "live": "https://mystore.example.com"
+    },
+    "featured": true,
+    "status": "completed"
+  },
+  {
+    "id": "task-management-app",
+    "title": "Task Management App",
+    "description": "A collaborative task management application with real-time updates, team collaboration features, and advanced filtering capabilities.",
+    "tags": ["React", "Socket.io", "MongoDB", "Express", "Tailwind CSS"],
+    "image": "/projects/task-app.jpg",
+    "links": {
+      "demo": "https://demo-tasks.example.com",
+      "github": "https://github.com/yourname/task-management"
+    },
+    "featured": true,
+    "status": "completed"
+  },
+  {
+    "id": "weather-dashboard",
+    "title": "Weather Dashboard",
+    "description": "An interactive weather dashboard with location-based forecasts, historical data visualization, and severe weather alerts.",
+    "tags": ["Vue.js", "D3.js", "Weather API", "PWA", "Chart.js"],
+    "image": "/projects/weather.jpg",
+    "links": {
+      "demo": "https://weather-dash.example.com",
+      "github": "https://github.com/yourname/weather-dashboard"
+    },
+    "featured": false,
+    "status": "completed"
+  },
+  {
+    "id": "ai-content-generator",
+    "title": "AI Content Generator",
+    "description": "An AI-powered content generation tool that helps marketers create engaging copy for social media, blogs, and advertisements.",
+    "tags": ["Next.js", "OpenAI API", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    "image": "/projects/ai-content.jpg",
+    "links": {
+      "demo": "https://ai-content.example.com",
+      "github": "https://github.com/yourname/ai-content-generator"
+    },
+    "featured": true,
+    "status": "in-progress"
+  },
+  {
+    "id": "portfolio-website",
+    "title": "Portfolio Website",
+    "description": "A responsive, dark-themed portfolio website built with React, TypeScript, and Framer Motion, featuring smooth animations and optimal SEO.",
+    "tags": ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+    "image": "/projects/portfolio.jpg",
+    "links": {
+      "demo": "https://yourname.dev",
+      "github": "https://github.com/yourname/portfolio"
+    },
+    "featured": false,
+    "status": "completed"
+  }
+]
