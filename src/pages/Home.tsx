@@ -32,7 +32,7 @@ export function Home() {
         <meta name="description" content={profile.tagline} />
         <meta
           name="keywords"
-          content={`${profile.name}, ${profile.role}, developer, portfolio, React, TypeScript, ${profile.location}`}
+          content={`${profile.name}, ${profile.role}, Engineer, portfolio, React, TypeScript, ${profile.location}`}
         />
 
         {/* Open Graph */}

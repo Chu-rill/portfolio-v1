@@ -1,19 +1,19 @@
 {
-  "name": "Your Name",
-  "role": "Full-Stack Developer",
-  "location": "San Francisco, CA",
+  "name": "Churchill ",
+  "role": "Full-Stack Engineer",
+  "location": "Ottawa, CAN",
   "tagline": "I build fast, delightful web applications that users love.",
   "bio": "Passionate full-stack developer with 5+ years of experience creating scalable web applications. I specialize in React, Node.js, and cloud technologies, with a focus on performance optimization and user experience. When I'm not coding, you can find me contributing to open-source projects or exploring the latest web technologies.",
-  "email": "hello@example.com",
-  "phone": "+1 (555) 123-4567",
+  "email": "churchilldaniel687@gmail.com",
+  "phone": "+1 (613) 355-0154",
   "availability": "Available for new opportunities",
   "yearsExperience": 5,
   "image": "/profile-placeholder.jpg",
   "resume": "/resume.pdf",
   "socials": {
-    "github": "https://github.com/yourname",
-    "linkedin": "https://linkedin.com/in/yourname",
-    "x": "https://x.com/yourname",
+    "github": "https://github.com/Chu-rill",
+    "linkedin": "https://www.linkedin.com/in/churchill-daniel/",
+    "x": "https://x.com/chu_rill",
     "website": "https://yourname.dev"
   }
 }

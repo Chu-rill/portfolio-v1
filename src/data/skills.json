@@ -1,128 +1,121 @@
 [
   {
-    "name": "React",
-    "category": "frontend",
-    "level": "expert",
-    "icon": "react",
-    "color": "#61DAFB"
+    "name": "NestJs",
+    "category": "frameworks",
+    "level": "advanced",
+    "icon": "devicon-nestjs-plain colored",
+    "color": "#E0234E"
   },
   {
     "name": "TypeScript",
     "category": "languages",
     "level": "expert",
-    "icon": "typescript",
+    "icon": "devicon-typescript-plain colored",
     "color": "#3178C6"
   },
   {
-    "name": "JavaScript",
-    "category": "languages",
-    "level": "expert",
-    "icon": "javascript",
-    "color": "#F7DF1E"
-  },
-  {
     "name": "Node.js",
-    "category": "backend",
+    "category": "frameworks",
     "level": "advanced",
-    "icon": "nodejs",
+    "icon": "devicon-nodejs-plain colored",
     "color": "#339933"
   },
   {
-    "name": "Next.js",
-    "category": "frameworks",
-    "level": "advanced",
-    "icon": "nextjs",
-    "color": "#000000"
-  },
-  {
-    "name": "Vue.js",
-    "category": "frontend",
-    "level": "intermediate",
-    "icon": "vue",
-    "color": "#4FC08D"
-  },
-  {
     "name": "Tailwind CSS",
-    "category": "frontend",
+    "category": "frameworks",
     "level": "expert",
-    "icon": "tailwind",
-    "color": "#06B6D4"
+    "icon": "devicon-tailwindcss-plain colored",
+    "color": "#38B2AC"
   },
   {
     "name": "PostgreSQL",
     "category": "database",
     "level": "advanced",
-    "icon": "postgresql",
+    "icon": "devicon-postgresql-plain colored",
     "color": "#336791"
   },
   {
     "name": "MongoDB",
     "category": "database",
     "level": "intermediate",
-    "icon": "mongodb",
+    "icon": "devicon-mongodb-plain colored",
     "color": "#47A248"
-  },
-  {
-    "name": "AWS",
-    "category": "tools",
-    "level": "intermediate",
-    "icon": "aws",
-    "color": "#FF9900"
   },
   {
     "name": "Docker",
     "category": "tools",
-    "level": "intermediate",
-    "icon": "docker",
+    "level": "beginner",
+    "icon": "devicon-docker-plain colored",
     "color": "#2496ED"
+  },
+  {
+    "name": "Postman",
+    "category": "tools",
+    "level": "advanced",
+    "icon": "",
+    "color": "#FF6C37"
   },
   {
     "name": "Git",
     "category": "tools",
-    "level": "expert",
-    "icon": "git",
+    "level": "advanced",
+    "icon": "devicon-git-plain colored",
     "color": "#F05032"
   },
   {
-    "name": "Python",
+    "name": "Linux",
+    "category": "tools",
+    "level": "advanced",
+    "icon": "devicon-linux-plain colored",
+    "color": "#FCC624"
+  },
+  {
+    "name": "Jest",
+    "category": "tools",
+    "level": "advanced",
+    "icon": "devicon-jest-plain colored",
+    "color": "#C21325"
+  },
+  {
+    "name": "Go",
+    "category": "languages",
+    "level": "beginner",
+    "icon": "devicon-go-original-wordmark colored",
+    "color": "#00ADD8"
+  },
+  {
+    "name": "PHP",
     "category": "languages",
     "level": "intermediate",
-    "icon": "python",
-    "color": "#3776AB"
+    "icon": "devicon-php-plain colored",
+    "color": "#777BB4"
   },
   {
     "name": "Express.js",
-    "category": "backend",
+    "category": "frameworks",
     "level": "advanced",
-    "icon": "express",
+    "icon": "devicon-express-original colored",
     "color": "#000000"
-  },
-  {
-    "name": "GraphQL",
-    "category": "backend",
-    "level": "intermediate",
-    "icon": "graphql",
-    "color": "#E10098"
   },
   {
     "name": "Redis",
     "category": "database",
     "level": "beginner",
-    "icon": "redis",
+    "icon": "devicon-redis-plain colored",
     "color": "#DC382D"
   },
   {
-    "name": "Figma",
-    "category": "tools",
+    "name": "Prisma",
+    "category": "database",
     "level": "intermediate",
-    "icon": "figma",
-    "color": "#F24E1E"
+    "icon": "",
+    "color": "#2D3771"
   },
   {
-    "name": "Prisma",
-    "category": "backend",
-    "level": "intermediate",
-    "icon": "prisma",
-    "color": "#2D3748"
+    "name": "React",
+    "category": "frameworks",
+    "level": "expert",
+    "icon": "devicon-react-original colored",
+    "color": "#61DAFB"
   }
 ]

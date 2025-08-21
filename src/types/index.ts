@@ -51,7 +51,7 @@ export interface Experience {
 
 export interface Skill {
   name: string;
-  category: "frontend" | "backend" | "database" | "tools" | "languages" | "frameworks";
+  category: "database" | "tools" | "languages" | "frameworks";
   level: "beginner" | "intermediate" | "advanced" | "expert";
   icon?: string;
   color?: string;

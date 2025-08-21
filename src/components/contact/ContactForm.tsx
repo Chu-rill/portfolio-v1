@@ -9,6 +9,7 @@ import {
   AlertCircle,
   Github,
   Linkedin,
+  Twitter,
 } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
@@ -159,6 +160,7 @@ export function ContactForm({ profile }: ContactFormProps) {
   const socialLinks = [
     { name: "GitHub", url: profile.socials.github, icon: Github },
     { name: "LinkedIn", url: profile.socials.linkedin, icon: Linkedin },
+    { name: "X", url: profile.socials.x, icon: Twitter },
   ].filter((link) => link.url);
 
   return (
