@@ -1,6 +1,5 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Container } from "../common/Container";
-import { ThemeToggle } from "../nav/ThemeToggle";
 import type { Profile } from "../../types";
 
 interface FooterProps {

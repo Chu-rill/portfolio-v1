@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Calendar, ExternalLink, Briefcase } from "lucide-react";
+import { MapPin, Calendar, Briefcase } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
 import type { Experience } from "../../types";
