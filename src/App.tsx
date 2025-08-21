@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './theme/ThemeProvider';
-import { Home } from './pages/Home';
-import { NotFound } from './pages/NotFound';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { ThemeProvider } from "./theme/ThemeProvider";
+import { Home } from "./pages/Home";
+import { NotFound } from "./pages/NotFound";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
           </Routes>
         </Router>
       </ThemeProvider>
+      <Analytics />
     </HelmetProvider>
   );
 }
 
-export default App
+export default App;
