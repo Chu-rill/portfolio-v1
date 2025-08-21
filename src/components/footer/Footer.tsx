@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Container } from "../common/Container";
 import { ThemeToggle } from "../nav/ThemeToggle";
 import type { Profile } from "../../types";
@@ -21,6 +21,7 @@ export function Footer({ profile }: FooterProps) {
   const socialLinks = [
     { name: "GitHub", url: profile.socials.github, icon: Github },
     { name: "LinkedIn", url: profile.socials.linkedin, icon: Linkedin },
+    { name: "X", url: profile.socials.x, icon: Twitter },
     { name: "Email", url: `mailto:${profile.email}`, icon: Mail },
   ].filter((link) => link.url);
 
@@ -123,10 +124,9 @@ export function Footer({ profile }: FooterProps) {
             {/* Copyright */}
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
               <span>
-                © {currentYear} {profile.name}. Made with
+                © {currentYear} {profile.name}.
               </span>
-              <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <span>and lots of coffee.</span>
+              <span>All rights reserved.</span>
             </div>
 
             {/* Theme Toggle & Links */}
@@ -152,11 +152,6 @@ export function Footer({ profile }: FooterProps) {
                 >
                   Terms
                 </a>
-              </div>
-
-              <div className="flex items-center space-x-2">
-                <span className="text-sm text-gray-400">Theme:</span>
-                <ThemeToggle />
               </div>
             </div>
           </div>

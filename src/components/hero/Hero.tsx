@@ -6,6 +6,7 @@ import {
   Linkedin,
   Mail,
   ExternalLink,
+  Twitter,
 } from "lucide-react";
 import { Container } from "../common/Container";
 import type { Profile } from "../../types";
@@ -37,6 +38,12 @@ export function Hero({ profile }: HeroProps) {
       url: profile.socials.linkedin,
       icon: Linkedin,
       color: "hover:text-blue-600",
+    },
+    {
+      name: "X",
+      url: profile.socials.x,
+      icon: Twitter,
+      color: "hover:text-blue-400",
     },
     {
       name: "Email",

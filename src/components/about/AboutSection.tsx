@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Calendar, Coffee, Award } from "lucide-react";
+import { MapPin, Calendar, Award } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
 import type { Profile } from "../../types";
@@ -32,16 +32,16 @@ export function AboutSection({ profile }: AboutSectionProps) {
       value: `${profile.yearsExperience}+`,
       color: "text-blue-500",
     },
-    {
-      icon: Coffee,
-      label: "Coffee Consumed",
-      value: "1000+",
-      color: "text-amber-500",
-    },
+    // {
+    //   icon: Coffee,
+    //   label: "Coffee Consumed",
+    //   value: "1000+",
+    //   color: "text-amber-500",
+    // },
     {
       icon: Award,
       label: "Projects Completed",
-      value: "50+",
+      value: "5+",
       color: "text-green-500",
     },
     {

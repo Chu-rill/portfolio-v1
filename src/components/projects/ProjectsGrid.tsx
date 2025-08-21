@@ -109,11 +109,11 @@ function ProjectCard({ project }: { project: Project }) {
           </h3>
 
           <div className="flex items-center space-x-2">
-            {project.featured && (
+            {/* {project.featured && (
               <span className="px-2 py-1 text-xs font-medium bg-brand-100 text-brand-700 dark:bg-brand-900/30 dark:text-brand-400 rounded-full">
                 Featured
               </span>
-            )}
+            )} */}
             <span
               className={`px-2 py-1 text-xs font-medium rounded-full flex items-center space-x-1 ${
                 statusColors[project.status]

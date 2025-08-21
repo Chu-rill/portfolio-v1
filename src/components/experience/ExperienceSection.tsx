@@ -66,7 +66,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
                 <span className="text-lg font-medium text-brand-500 dark:text-brand-400">
                   {experience.company}
                 </span>
-                {experience.companyUrl && (
+                {/* {experience.companyUrl && (
                   <a
                     href={experience.companyUrl}
                     target="_blank"
@@ -76,7 +76,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
                   >
                     <ExternalLink className="h-4 w-4" />
                   </a>
-                )}
+                )} */}
               </div>
               <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center space-x-1">
@@ -182,10 +182,7 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
           {/* Experience Timeline */}
           <div className="relative max-w-4xl mx-auto">
             {sortedExperiences.map((experience) => (
-              <ExperienceCard
-                key={experience.id}
-                experience={experience}
-              />
+              <ExperienceCard key={experience.id} experience={experience} />
             ))}
           </div>
 

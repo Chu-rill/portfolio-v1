@@ -1,78 +1,48 @@
 [
   {
-    "id": "senior-fullstack-dev",
-    "role": "Senior Full-Stack Developer",
-    "company": "TechCorp Inc.",
-    "location": "San Francisco, CA",
-    "type": "full-time",
-    "startDate": "2022-03",
-    "endDate": null,
-    "current": true,
-    "highlights": [
-      "Led development of a customer portal serving 50K+ users, resulting in 40% increase in user engagement",
-      "Architected and implemented microservices infrastructure, reducing system downtime by 60%",
-      "Mentored 3 junior developers and established code review processes that improved code quality by 30%",
-      "Migrated legacy systems to modern React/Node.js stack, improving performance by 50%",
-      "Collaborated with product team to define technical requirements and delivery timelines"
-    ],
-    "technologies": ["React", "Node.js", "PostgreSQL", "AWS", "Docker", "TypeScript"],
-    "companyUrl": "https://techcorp.example.com"
-  },
-  {
-    "id": "fullstack-dev",
-    "role": "Full-Stack Developer",
-    "company": "StartupXYZ",
+    "id": "Backend Developer",
+    "role": "Backend Developer",
+    "company": "Melcom eX (Startup)",
     "location": "Remote",
     "type": "full-time",
-    "startDate": "2020-06",
-    "endDate": "2022-02",
+    "startDate": "2024-07",
+    "endDate": "2025-04",
     "current": false,
     "highlights": [
-      "Built MVP for fintech startup from scratch, helping secure $2M in Series A funding",
-      "Developed real-time trading dashboard handling 10K+ concurrent users",
-      "Implemented secure payment processing integration with multiple providers",
-      "Optimized database queries reducing API response times by 70%",
-      "Worked directly with founders to prioritize features and technical roadmap"
+      "Collaborating with developers to build and optimize backend infrastructure",
+      "Designed and Deployed Application programming interface (API)",
+      "Working on scalable backend solutions for startup projects"
     ],
-    "technologies": ["Vue.js", "Express.js", "MongoDB", "Redis", "Stripe", "WebSocket"],
-    "companyUrl": "https://startupxyz.example.com"
+    "technologies": [
+      "Express",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
+      "Docker",
+      "TypeScript"
+    ]
   },
   {
-    "id": "frontend-dev",
-    "role": "Frontend Developer",
-    "company": "Digital Agency Pro",
-    "location": "New York, NY",
+    "id": "Core Team Member",
+    "role": "Core Team Member",
+    "company": "Google Developer Group on Campus (GDGOC) - University of Ilorin",
+    "location": "Ilorin, Nigeria",
     "type": "full-time",
-    "startDate": "2019-01",
-    "endDate": "2020-05",
+    "startDate": "2024-09",
+    "endDate": "2025-09",
     "current": false,
     "highlights": [
-      "Delivered 15+ client websites with 100% on-time delivery rate",
-      "Specialized in responsive design and cross-browser compatibility",
-      "Improved website loading speeds by average of 45% through optimization techniques",
-      "Collaborated with designers to translate mockups into pixel-perfect implementations",
-      "Trained team on modern JavaScript frameworks and best practices"
+      "Collaborating with developers to build the website for our events (Build with AI)",
+      "Organize technical workshops and events",
+      "Contributing to the developer community growth on campus"
     ],
-    "technologies": ["React", "SCSS", "JavaScript", "WordPress", "Figma", "Git"],
-    "companyUrl": "https://digitalagencypro.example.com"
-  },
-  {
-    "id": "junior-dev",
-    "role": "Junior Web Developer",
-    "company": "WebSolutions LLC",
-    "location": "Austin, TX",
-    "type": "full-time",
-    "startDate": "2018-06",
-    "endDate": "2018-12",
-    "current": false,
-    "highlights": [
-      "Completed 6-month intensive training program in full-stack web development",
-      "Built internal tools that improved team productivity by 25%",
-      "Assisted senior developers with debugging and feature implementation",
-      "Learned modern development practices including version control and testing",
-      "Contributed to open-source projects to expand technical knowledge"
-    ],
-    "technologies": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Bootstrap"],
-    "companyUrl": "https://websolutions.example.com"
+    "technologies": [
+      "Express",
+      "Node.js",
+      "PostgreSQL",
+      "NextJs",
+      "Docker",
+      "TypeScript"
+    ]
   }
 ]

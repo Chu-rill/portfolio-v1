@@ -1,67 +1,76 @@
 [
   {
-    "id": "ecommerce-platform",
-    "title": "E-commerce Platform",
-    "description": "A modern, full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include real-time inventory management, payment processing, and an admin dashboard.",
-    "longDescription": "This comprehensive e-commerce solution handles everything from product management to order fulfillment. Built with scalability in mind, it can handle thousands of concurrent users and processes payments securely through Stripe integration.",
-    "tags": ["React", "Node.js", "PostgreSQL", "TypeScript", "Stripe", "AWS"],
-    "image": "/projects/ecommerce.jpg",
+    "id": "innkeeperpro",
+    "title": "InnkeeperPro",
+    "description": "InnkeeperPro is a FullStack hotel management system used to view listed hotels, rooms and make booking with an admin dashboard.",
+    "longDescription": "InnkeeperPro is a complete hotel management solution built with scalability in mind. It allows guests to browse hotels, book rooms, and make secure payments while providing administrators with a dashboard to manage listings, bookings, and customers efficiently.",
+    "tags": ["React", "NestJs", "PostgreSQL", "Tailwind", "Prisma"],
+    "image": "../../public/images/project4.png",
     "links": {
-      "demo": "https://demo-ecommerce.example.com",
-      "github": "https://github.com/yourname/ecommerce-platform",
-      "live": "https://mystore.example.com"
+      "demo": "https://innkeeperpro.vercel.app/",
+      "github": "https://github.com/Chu-rill/hotel-management-client"
     },
     "featured": true,
     "status": "completed"
   },
   {
-    "id": "task-management-app",
-    "title": "Task Management App",
-    "description": "A collaborative task management application with real-time updates, team collaboration features, and advanced filtering capabilities.",
-    "tags": ["React", "Socket.io", "MongoDB", "Express", "Tailwind CSS"],
-    "image": "/projects/task-app.jpg",
+    "id": "recapify",
+    "title": "Recapify",
+    "description": "A text transformation tool that allows users to summarize, paraphrase, and generate text using Gemini API and a TTS audio file that is downloadable.",
+    "longDescription": "Recapify leverages AI with the Gemini API to provide powerful text transformation features such as summarization, paraphrasing, and content generation. It also integrates TTS with downloadable audio files, all within a clean, React and TailwindCSS-powered interface.",
+    "tags": [
+      "React",
+      "NestJs",
+      "PostgreSQL",
+      "Gemini",
+      "Unrealspeech",
+      "TypeScript"
+    ],
+    "image": "../../public/images/project1.png",
     "links": {
-      "demo": "https://demo-tasks.example.com",
-      "github": "https://github.com/yourname/task-management"
-    },
-    "featured": true,
-    "status": "completed"
-  },
-  {
-    "id": "weather-dashboard",
-    "title": "Weather Dashboard",
-    "description": "An interactive weather dashboard with location-based forecasts, historical data visualization, and severe weather alerts.",
-    "tags": ["Vue.js", "D3.js", "Weather API", "PWA", "Chart.js"],
-    "image": "/projects/weather.jpg",
-    "links": {
-      "demo": "https://weather-dash.example.com",
-      "github": "https://github.com/yourname/weather-dashboard"
-    },
-    "featured": false,
-    "status": "completed"
-  },
-  {
-    "id": "ai-content-generator",
-    "title": "AI Content Generator",
-    "description": "An AI-powered content generation tool that helps marketers create engaging copy for social media, blogs, and advertisements.",
-    "tags": ["Next.js", "OpenAI API", "Prisma", "PostgreSQL", "Tailwind CSS"],
-    "image": "/projects/ai-content.jpg",
-    "links": {
-      "demo": "https://ai-content.example.com",
-      "github": "https://github.com/yourname/ai-content-generator"
+      "github": "https://github.com/Chu-rill/Recapify"
     },
     "featured": true,
     "status": "in-progress"
   },
   {
-    "id": "portfolio-website",
-    "title": "Portfolio Website",
-    "description": "A responsive, dark-themed portfolio website built with React, TypeScript, and Framer Motion, featuring smooth animations and optimal SEO.",
-    "tags": ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
-    "image": "/projects/portfolio.jpg",
+    "id": "storynest",
+    "title": "StoryNest",
+    "description": "StoryNest is a modern social blogging platform that enables users to share stories, experiences, and engage with a community of writers and readers.",
+    "longDescription": "StoryNest empowers writers and readers to connect through a blogging platform designed for engagement. Users can post stories, interact with comments, and share experiences, while the backend manages data securely with MongoDB and Cloudinary for media hosting.",
+    "tags": ["React", "MongoDB", "Express", "Cloudinary"],
+    "image": "../../public/images/project2.png",
     "links": {
-      "demo": "https://yourname.dev",
-      "github": "https://github.com/yourname/portfolio"
+      "demo": "https://story-nest-mu.vercel.app/",
+      "github": "https://github.com/Chu-rill/StoryNest"
+    },
+    "featured": true,
+    "status": "completed"
+  },
+  {
+    "id": "trivio",
+    "title": "Trivio",
+    "description": "A fullstack quiz application that allows users to create quizzes, answer questions from various categories.",
+    "longDescription": "Trivio is an interactive quiz platform that enables users to create, play, and compete in quizzes across multiple categories and difficulty levels. It features a leaderboard system, score tracking, and quiz filtering options.",
+    "tags": ["React", "MongoDB", "Express"],
+    "image": "../../public/images/project7.png",
+    "links": {
+      "demo": "https://trivio-chi.vercel.app/",
+      "github": "https://github.com/Chu-rill/Quiz_app"
+    },
+    "featured": false,
+    "status": "completed"
+  },
+  {
+    "id": "chatspace",
+    "title": "ChatSpace",
+    "description": "A real-time full-stack chat application using React, Express, and MongoDB, featuring serverless functions hosted on Google Cloud.",
+    "longDescription": "ChatSpace is a messaging app built for speed and scalability. It supports real-time communication with Socket.io, integrates with Google Cloud Functions for serverless operations, and provides a smooth, responsive UI with React.",
+    "tags": ["React", "Express", "MongoDB", "Socket.io"],
+    "image": "../../public/images/project3.png",
+    "links": {
+      "demo": "https://chat-space-sand.vercel.app/",
+      "github": "https://github.com/Chu-rill/ChatSpace"
     },
     "featured": false,
     "status": "completed"
