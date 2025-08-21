@@ -111,3 +111,24 @@
 .focus-visible {
   @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white dark:ring-offset-background-dark;
 }
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Ensure sections are always visible on mobile */
+  section {
+    min-height: auto !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Better mobile spacing */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Ensure grids work on mobile */
+  .grid {
+    display: grid !important;
+  }
+}

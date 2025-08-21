@@ -102,7 +102,7 @@ export function Navbar() {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"

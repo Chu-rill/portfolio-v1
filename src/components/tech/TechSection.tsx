@@ -47,7 +47,7 @@ function SkillCard({ skill }: { skill: Skill }) {
   return (
     <motion.div
       variants={fadeInUp}
-      className="group relative overflow-hidden rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg transition-all duration-300"
+      className="group relative  rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg transition-all duration-300"
     >
       <div className="flex items-center space-x-4 mb-4">
         {/* Devicon Icon with skill-specific color */}
@@ -118,7 +118,7 @@ function SkillCategory({
         </span>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {skills.map((skill) => (
           <SkillCard key={skill.name} skill={skill} />
         ))}
@@ -140,12 +140,12 @@ export function TechSection({ skills }: { skills: Skill[] }) {
   const categoryOrder = ["languages", "frameworks", "tools", "database"];
 
   return (
-    <section id="skills" className="py-24 bg-gray-50 dark:bg-gray-900/50">
+    <section id="skills" className="py-12 md:py-24 bg-gray-50 dark:bg-gray-900/50">
       <Container>
         <motion.div
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={stagger}
         >
           <SectionHeader
@@ -157,7 +157,7 @@ export function TechSection({ skills }: { skills: Skill[] }) {
           {/* Overview Stats */}
           <motion.div
             variants={fadeInUp}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-16"
           >
             {Object.entries(skillsByCategory).map(
               ([category, categorySkills]) => {

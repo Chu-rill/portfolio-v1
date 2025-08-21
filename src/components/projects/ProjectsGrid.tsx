@@ -152,12 +152,12 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
   const otherProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="projects" className="py-24 bg-white dark:bg-background-dark">
+    <section id="projects" className="py-12 md:py-24 bg-white dark:bg-background-dark">
       <Container>
         <motion.div
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={stagger}
         >
           <SectionHeader
@@ -168,7 +168,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 
           {/* Featured Projects */}
           <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-16"
             variants={stagger}
           >
             {featuredProjects.map((project) => (
@@ -189,7 +189,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
               </motion.div>
 
               <motion.div
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
                 variants={stagger}
               >
                 {otherProjects.map((project) => (
