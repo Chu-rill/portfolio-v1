@@ -58,7 +58,8 @@ function SkillCard({ skill }: { skill: Skill }) {
           }}
         >
           {skill.icon ? (
-            <i className={`${skill.icon} text-2xl`} />
+            // <i className={`${skill.icon} text-2xl`} />
+            <img src={skill.icon} alt={skill.name} className="h-8 w-8" />
           ) : (
             skill.name.substring(0, 2).toUpperCase()
           )}
