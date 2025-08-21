@@ -5,7 +5,7 @@
     "description": "InnkeeperPro is a FullStack hotel management system used to view listed hotels, rooms and make booking with an admin dashboard.",
     "longDescription": "InnkeeperPro is a complete hotel management solution built with scalability in mind. It allows guests to browse hotels, book rooms, and make secure payments while providing administrators with a dashboard to manage listings, bookings, and customers efficiently.",
     "tags": ["React", "NestJs", "PostgreSQL", "Tailwind", "Prisma"],
-    "image": "../../public/images/project4.png",
+    "image": "/images/project4.png",
     "links": {
       "demo": "https://innkeeperpro.vercel.app/",
       "github": "https://github.com/Chu-rill/hotel-management-client"
@@ -26,7 +26,7 @@
       "Unrealspeech",
       "TypeScript"
     ],
-    "image": "../../public/images/project1.png",
+    "image": "/images/project1.png",
     "links": {
       "github": "https://github.com/Chu-rill/Recapify"
     },
@@ -39,7 +39,7 @@
     "description": "StoryNest is a modern social blogging platform that enables users to share stories, experiences, and engage with a community of writers and readers.",
     "longDescription": "StoryNest empowers writers and readers to connect through a blogging platform designed for engagement. Users can post stories, interact with comments, and share experiences, while the backend manages data securely with MongoDB and Cloudinary for media hosting.",
     "tags": ["React", "MongoDB", "Express", "Cloudinary"],
-    "image": "../../public/images/project2.png",
+    "image": "/images/project2.png",
     "links": {
       "demo": "https://story-nest-mu.vercel.app/",
       "github": "https://github.com/Chu-rill/StoryNest"
@@ -53,7 +53,7 @@
     "description": "A fullstack quiz application that allows users to create quizzes, answer questions from various categories.",
     "longDescription": "Trivio is an interactive quiz platform that enables users to create, play, and compete in quizzes across multiple categories and difficulty levels. It features a leaderboard system, score tracking, and quiz filtering options.",
     "tags": ["React", "MongoDB", "Express"],
-    "image": "../../public/images/project7.png",
+    "image": "/images/project7.png",
     "links": {
       "demo": "https://trivio-chi.vercel.app/",
       "github": "https://github.com/Chu-rill/Quiz_app"
@@ -67,7 +67,7 @@
     "description": "A real-time full-stack chat application using React, Express, and MongoDB, featuring serverless functions hosted on Google Cloud.",
     "longDescription": "ChatSpace is a messaging app built for speed and scalability. It supports real-time communication with Socket.io, integrates with Google Cloud Functions for serverless operations, and provides a smooth, responsive UI with React.",
     "tags": ["React", "Express", "MongoDB", "Socket.io"],
-    "image": "../../public/images/project3.png",
+    "image": "/images/project3.png",
     "links": {
       "demo": "https://chat-space-sand.vercel.app/",
       "github": "https://github.com/Chu-rill/ChatSpace"

@@ -8,8 +8,8 @@
   "phone": "+1 (613) 355-0154",
   "availability": "Available for new opportunities",
   "yearsExperience": 3,
-  "image": "../../public/images/profile2.jpeg",
-  "resume": "../../public/Resume.pdf",
+  "image": "/images/profile2.jpeg",
+  "resume": "/Resume.pdf",
   "socials": {
     "github": "https://github.com/Chu-rill",
     "linkedin": "https://www.linkedin.com/in/churchill-daniel/",
