@@ -16,6 +16,9 @@
   --font-sans: Inter, system-ui, sans-serif;
 }
 
+/* Enable dark mode variant for Tailwind v4 */
+@variant dark (.dark &);
+
 /* Base styles */
 @layer base {
   html {

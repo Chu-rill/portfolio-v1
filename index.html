@@ -17,9 +17,26 @@
     <!-- Prevent flash of wrong theme -->
     <script>
       (function () {
-        const theme = localStorage.getItem("theme") || "dark";
+        // Get saved theme from localStorage
+        const savedTheme = localStorage.getItem("theme");
+        let theme;
+        
+        if (savedTheme && (savedTheme === "dark" || savedTheme === "light")) {
+          theme = savedTheme;
+        } else {
+          // Check system preference if no saved theme
+          if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            theme = "dark";
+          } else {
+            theme = "light";
+          }
+        }
+        
+        // Apply theme class
         if (theme === "dark") {
           document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.add("light");
         }
       })();
     </script>

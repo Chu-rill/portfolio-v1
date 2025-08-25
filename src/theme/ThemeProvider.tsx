@@ -7,52 +7,75 @@ interface ThemeContextType {
   toggle: () => void;
 }
 
-const ThemeContext = createContext<ThemeContextType>({ 
-  theme: "dark", 
-  toggle: () => {} 
+const ThemeContext = createContext<ThemeContextType>({
+  theme: "dark",
+  toggle: () => {},
 });
 
-interface ThemeProviderProps {
-  children: React.ReactNode;
-}
+// Helper function to get initial theme
+const getInitialTheme = (): Theme => {
+  // Check if we're in the browser
+  if (typeof window === "undefined") return "dark";
+  
+  // First, check localStorage for saved preference
+  const savedTheme = localStorage.getItem("theme") as Theme | null;
+  if (savedTheme && (savedTheme === "dark" || savedTheme === "light")) {
+    return savedTheme;
+  }
+  
+  // If no saved preference, check system preference
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+  
+  // Default to light theme
+  return "light";
+};
 
-export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    // Check localStorage first, default to dark if not found
-    const saved = localStorage.getItem("theme") as Theme | null;
-    return saved ?? "dark";
-  });
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   useEffect(() => {
+    console.log("Theme changed to:", theme);
     const root = document.documentElement;
-    
-    // Remove both classes first to avoid conflicts
+
+    // Remove both classes first
     root.classList.remove("dark", "light");
+
+    // Add the current theme class
+    root.classList.add(theme);
     
-    if (theme === "dark") {
-      root.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      root.classList.add("light");
-      localStorage.setItem("theme", "light");
-    }
+    // Save theme preference to localStorage
+    localStorage.setItem("theme", theme);
+
+    console.log("Classes on html element:", root.classList.toString());
   }, [theme]);
 
-  // Set initial theme on mount to prevent flash
+  // Listen for system theme changes
   useEffect(() => {
-    const root = document.documentElement;
-    const saved = localStorage.getItem("theme") as Theme | null;
-    const initialTheme = saved ?? "dark";
+    if (typeof window === "undefined") return;
     
-    if (initialTheme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    
+    const handleChange = (e: MediaQueryListEvent) => {
+      // Only update if no saved preference exists
+      const savedTheme = localStorage.getItem("theme");
+      if (!savedTheme) {
+        setTheme(e.matches ? "dark" : "light");
+      }
+    };
+    
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   const toggle = () => {
-    setTheme(prevTheme => prevTheme === "dark" ? "light" : "dark");
+    console.log("Toggle clicked, current theme:", theme);
+    setTheme((prevTheme) => {
+      const newTheme = prevTheme === "dark" ? "light" : "dark";
+      console.log("Setting new theme:", newTheme);
+      return newTheme;
+    });
   };
 
   return (
@@ -65,7 +88,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 };

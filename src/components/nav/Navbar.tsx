@@ -73,9 +73,9 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-xl font-bold text-gray-900 dark:text-white hover:text-brand-500 dark:hover:text-brand-400 transition-colors"
+              className="text-xl font-bold text-gray-900 dark:text-white hover:text-brand-500 dark:hover:text-brand-400 transition-colors flex items-center "
             >
-              CD Churchill Daniel
+              CD <p className=" ml-4">Churchill Daniel</p>
             </button>
           </div>
 
@@ -97,12 +97,12 @@ export function Navbar() {
                 {link.name}
               </button>
             ))}
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -128,7 +128,7 @@ export function Navbar() {
                   block w-full text-left px-4 py-2 text-base font-medium transition-colors
                   ${
                     activeSection === link.href.substring(1)
-                      ? "text-brand-500 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/20"
+                      ? "text-brand-500 dark:text-brand-400 "
                       : "text-gray-700 dark:text-gray-300 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-gray-50 dark:hover:bg-gray-800/50"
                   }
                 `}

@@ -41,6 +41,72 @@ function ProjectCard({ project }: { project: Project }) {
 
   const StatusIcon = statusIcons[project.status];
 
+  const renderProjectLinks = (showLabels: boolean = false) => {
+    const links = [];
+
+    if (project.links.demo) {
+      links.push(
+        <a
+          key="demo"
+          href={project.links.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${
+            showLabels
+              ? "flex items-center space-x-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg transition-colors text-sm font-medium"
+              : "bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
+          }`}
+          aria-label="View demo"
+        >
+          <Eye className="h-4 w-4" />
+          {showLabels && <span>Demo</span>}
+        </a>
+      );
+    }
+
+    if (project.links.github) {
+      links.push(
+        <a
+          key="github"
+          href={project.links.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${
+            showLabels
+              ? "flex items-center space-x-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg transition-colors text-sm font-medium"
+              : "bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
+          }`}
+          aria-label="View source code"
+        >
+          <Github className="h-4 w-4" />
+          {showLabels && <span>Code</span>}
+        </a>
+      );
+    }
+
+    if (project.links.live) {
+      links.push(
+        <a
+          key="live"
+          href={project.links.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${
+            showLabels
+              ? "flex items-center space-x-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg transition-colors text-sm font-medium"
+              : "bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
+          }`}
+          aria-label="View live site"
+        >
+          <ExternalLink className="h-4 w-4" />
+          {showLabels && <span>Live</span>}
+        </a>
+      );
+    }
+
+    return links;
+  };
+
   return (
     <motion.div
       variants={fadeInUp}
@@ -63,41 +129,9 @@ function ProjectCard({ project }: { project: Project }) {
           </div>
         )}
 
-        {/* Overlay with links */}
-        <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-          {project.links.demo && (
-            <a
-              href={project.links.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
-              aria-label="View demo"
-            >
-              <Eye className="h-5 w-5" />
-            </a>
-          )}
-          {project.links.github && (
-            <a
-              href={project.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
-              aria-label="View source code"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-          )}
-          {project.links.live && (
-            <a
-              href={project.links.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
-              aria-label="View live site"
-            >
-              <ExternalLink className="h-5 w-5" />
-            </a>
-          )}
+        {/* Overlay with links - Hidden on mobile, shown on desktop */}
+        <div className="hidden md:flex absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-center justify-center space-x-4">
+          {renderProjectLinks(false)}
         </div>
       </div>
 
@@ -109,11 +143,6 @@ function ProjectCard({ project }: { project: Project }) {
           </h3>
 
           <div className="flex items-center space-x-2">
-            {/* {project.featured && (
-              <span className="px-2 py-1 text-xs font-medium bg-brand-100 text-brand-700 dark:bg-brand-900/30 dark:text-brand-400 rounded-full">
-                Featured
-              </span>
-            )} */}
             <span
               className={`px-2 py-1 text-xs font-medium rounded-full flex items-center space-x-1 ${
                 statusColors[project.status]
@@ -130,6 +159,11 @@ function ProjectCard({ project }: { project: Project }) {
         <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
           {project.description}
         </p>
+
+        {/* Mobile Links - Only shown on mobile */}
+        <div className="md:hidden flex flex-wrap gap-2 mb-4">
+          {renderProjectLinks(true)}
+        </div>
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2">
@@ -152,7 +186,10 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
   const otherProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="projects" className="py-12 md:py-24 bg-white dark:bg-background-dark">
+    <section
+      id="projects"
+      className="py-12 md:py-24 bg-white dark:bg-background-dark"
+    >
       <Container>
         <motion.div
           initial="initial"

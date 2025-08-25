@@ -7,7 +7,7 @@
     "tags": ["React", "NestJs", "PostgreSQL", "Tailwind", "Prisma"],
     "image": "/images/project4.png",
     "links": {
-      "demo": "https://innkeeperpro.vercel.app/",
+      "live": "https://innkeeperpro.vercel.app/",
       "github": "https://github.com/Chu-rill/hotel-management-client"
     },
     "featured": true,
@@ -41,7 +41,7 @@
     "tags": ["React", "MongoDB", "Express", "Cloudinary"],
     "image": "/images/project2.png",
     "links": {
-      "demo": "https://story-nest-mu.vercel.app/",
+      "live": "https://story-nest-mu.vercel.app/",
       "github": "https://github.com/Chu-rill/StoryNest"
     },
     "featured": true,
@@ -55,7 +55,7 @@
     "tags": ["React", "MongoDB", "Express"],
     "image": "/images/project7.png",
     "links": {
-      "demo": "https://trivio-chi.vercel.app/",
+      "live": "https://trivio-chi.vercel.app/",
       "github": "https://github.com/Chu-rill/Quiz_app"
     },
     "featured": false,
@@ -69,7 +69,7 @@
     "tags": ["React", "Express", "MongoDB", "Socket.io"],
     "image": "/images/project3.png",
     "links": {
-      "demo": "https://chat-space-sand.vercel.app/",
+      "live": "https://chat-space-sand.vercel.app/",
       "github": "https://github.com/Chu-rill/ChatSpace"
     },
     "featured": false,

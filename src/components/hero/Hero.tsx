@@ -75,7 +75,7 @@ export function Hero({ profile }: HeroProps) {
         >
           {/* Greeting */}
           <motion.p
-            className="text-brand-500 dark:text-brand-400 font-medium text-lg mb-4"
+            className="text-brand-500 dark:text-brand-400 font-medium text-lg mb-4 mt-16"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
