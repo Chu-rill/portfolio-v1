@@ -48,6 +48,20 @@
     "status": "completed"
   },
   {
+    "id": "banter",
+    "title": "Banter",
+    "description": "Modern real-time communication platform featuring instant messaging, HD video calls, screen sharing and collaborative rooms. Built with a Next.js frontend,a NestJS backend, PostgreSQL database, Socket.IO for real-time features, and WebRTC for peer-to-peer video calling.",
+    "longDescription": "Banter is a modern real-time communication platform featuring instant messaging, HD video calls, file sharing, and collaborative rooms. Built with Next.js, NestJS,PostgreSQL, and WebRTC, it offers typing indicators, screen sharing, Google OAuth authentication, dark/light themes, and mobile-responsive design for seamless team collaboration and personal communication.",
+    "tags": ["NextJs", "NestJs", "Redis", "Websockets", "WebRTC", "PostgreSQL"],
+    "image": "/images/project5.png",
+    "links": {
+      "live": "",
+      "github": "https://github.com/Chu-rill/StoryNest"
+    },
+    "featured": true,
+    "status": "in-progress"
+  },
+  {
     "id": "trivio",
     "title": "Trivio",
     "description": "A fullstack quiz application that allows users to create quizzes, answer questions from various categories.",
