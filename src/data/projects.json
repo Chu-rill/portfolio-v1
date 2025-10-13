@@ -14,20 +14,6 @@
     "status": "completed"
   },
   {
-    "id": "innkeeperpro",
-    "title": "InnkeeperPro",
-    "description": "InnkeeperPro is a FullStack hotel management system used to view listed hotels, rooms and make booking with an admin dashboard.",
-    "longDescription": "InnkeeperPro is a complete hotel management solution built with scalability in mind. It allows guests to browse hotels, book rooms, and make secure payments while providing administrators with a dashboard to manage listings, bookings, and customers efficiently.",
-    "tags": ["React", "NestJs", "PostgreSQL", "Tailwind", "Prisma"],
-    "image": "/images/project4.png",
-    "links": {
-      "live": "https://innkeeperpro.vercel.app/",
-      "github": "https://github.com/Chu-rill/hotel-management-client"
-    },
-    "featured": true,
-    "status": "completed"
-  },
-  {
     "id": "recapify",
     "title": "Recapify",
     "description": "A text transformation tool that allows users to summarize, paraphrase, and generate text using Gemini API and a TTS audio file that is downloadable.",
@@ -42,10 +28,25 @@
     ],
     "image": "/images/project1.png",
     "links": {
+      "live": "https://recapify-seven.vercel.app/",
       "github": "https://github.com/Chu-rill/Recapify"
     },
     "featured": true,
     "status": "in-progress"
+  },
+  {
+    "id": "innkeeperpro",
+    "title": "InnkeeperPro",
+    "description": "InnkeeperPro is a FullStack hotel management system used to view listed hotels, rooms and make booking with an admin dashboard.",
+    "longDescription": "InnkeeperPro is a complete hotel management solution built with scalability in mind. It allows guests to browse hotels, book rooms, and make secure payments while providing administrators with a dashboard to manage listings, bookings, and customers efficiently.",
+    "tags": ["React", "NestJs", "PostgreSQL", "Tailwind", "Prisma"],
+    "image": "/images/project4.png",
+    "links": {
+      "live": "https://innkeeperpro.vercel.app/",
+      "github": "https://github.com/Chu-rill/hotel-management-client"
+    },
+    "featured": true,
+    "status": "completed"
   },
   {
     "id": "storynest",

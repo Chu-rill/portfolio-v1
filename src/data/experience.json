@@ -27,7 +27,7 @@
     "role": "Core Team Member",
     "company": "Google Developer Group on Campus (GDGOC) - University of Ilorin",
     "location": "Ilorin, Nigeria",
-    "type": "full-time",
+    "type": "part-time",
     "startDate": "2024-09",
     "endDate": "2025-09",
     "current": false,
@@ -44,5 +44,22 @@
       "Docker",
       "TypeScript"
     ]
+  },
+  {
+    "id": "FIRST LEGO League Nigeria",
+    "role": "Lead Programmer",
+    "company": "Federal Science and Technical College, Orozo",
+    "location": "Abuja, Nigeria",
+    "type": "Full-time (Student Competition)",
+    "startDate": "2019-10",
+    "endDate": "2022-08",
+    "current": false,
+    "highlights": [
+      "Represented school in the FIRST LEGO League Nigeria, developing and programming robots for real-world challenge simulations",
+      "Led a team of students in designing, coding, and testing autonomous robots using LEGO Mindstorms technology",
+      "Collaborated with peers to optimize robot performance and presentation for competition judges",
+      "Our team finished as runners-up in the 2021 season"
+    ],
+    "technologies": ["LEGO Mindstorms"]
   }
 ]
