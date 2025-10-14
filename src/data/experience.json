@@ -2,16 +2,16 @@
   {
     "id": "Backend Developer",
     "role": "Backend Developer",
-    "company": "Melcom eX (Startup)",
+    "company": "Melcom eX",
     "location": "Remote",
     "type": "full-time",
     "startDate": "2024-07",
-    "endDate": "2025-04",
+    "endDate": "2025-05",
     "current": false,
     "highlights": [
-      "Collaborating with developers to build and optimize backend infrastructure",
-      "Designed and Deployed Application programming interface (API)",
-      "Working on scalable backend solutions for startup projects"
+      "Built scalable REST APIs with NestJS and PostgreSQL",
+      "Implemented caching and authentication systems to enhance performance",
+      "Contributed to CI/CD pipelines and deployment workflows."
     ],
     "technologies": [
       "Express",
@@ -27,14 +27,14 @@
     "role": "Core Team Member",
     "company": "Google Developer Group on Campus (GDGOC) - University of Ilorin",
     "location": "Ilorin, Nigeria",
-    "type": "part-time",
+    "type": "full-time",
     "startDate": "2024-09",
     "endDate": "2025-09",
     "current": false,
     "highlights": [
-      "Collaborating with developers to build the website for our events (Build with AI)",
-      "Organize technical workshops and events",
-      "Contributing to the developer community growth on campus"
+      "Organized and facilitated technical workshops and events to foster developer community growth on campus",
+      "Collaborated with the Technical Team at the largest campus tech event in Northern Sub-Saharan Africa",
+      "Contributed as part of the Technical Team for major events such as CareerFest x Tech Summit and Build with AI."
     ],
     "technologies": [
       "Express",

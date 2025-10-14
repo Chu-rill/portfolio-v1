@@ -24,6 +24,7 @@ export interface Project {
   title: string;
   description: string;
   longDescription?: string;
+  enhancedDetails?: string;
   tags: string[];
   image?: string;
   links: {
