@@ -64,7 +64,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
           <SectionHeader
             title="About Me"
             subtitle="Get to know more about who I am, what I do, and what inspires me"
-            center
+            className="  w-full flex flex-col items-center"
           />
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
