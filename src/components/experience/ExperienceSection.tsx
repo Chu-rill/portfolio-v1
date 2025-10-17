@@ -165,12 +165,12 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
   });
 
   return (
-    <section id="experience" className="py-24 bg-white dark:bg-background-dark">
+    <section id="experience" className="py-12 md:py-24 bg-white dark:bg-background-dark">
       <Container>
         <motion.div
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={stagger}
         >
           <SectionHeader
