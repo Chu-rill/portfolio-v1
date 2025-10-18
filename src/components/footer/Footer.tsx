@@ -154,14 +154,6 @@ export function Footer({ profile }: FooterProps) {
               </div>
             </div>
           </div>
-
-          {/* Additional Info */}
-          <div className="mt-6 pt-6 border-t border-gray-800 dark:border-gray-900 text-center">
-            <p className="text-xs text-gray-500">
-              Built with React, TypeScript, Tailwind CSS, and Framer Motion.
-              Deployed with ❤️ on Vercel.
-            </p>
-          </div>
         </div>
       </Container>
     </footer>
