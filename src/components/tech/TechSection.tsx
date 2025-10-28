@@ -19,13 +19,6 @@ const stagger = {
   },
 };
 
-const levelPercent = {
-  beginner: 25,
-  intermediate: 50,
-  advanced: 75,
-  expert: 100,
-};
-
 // Category icons (Lucide)
 const categoryIcons = {
   database: Database,
@@ -78,13 +71,13 @@ function SkillCard({ skill }: { skill: Skill }) {
           <motion.div
             className="h-3 rounded-full"
             initial={{ width: 0 }}
-            whileInView={{ width: `${levelPercent[skill.level]}%` }}
+            whileInView={{ width: `${skill.level}%` }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             style={{ background: skill.color }}
           />
         </div>
-        <p>{`${levelPercent[skill.level]}%`}</p>
+        <p>{`${skill.level}%`}</p>
       </div>
     </motion.div>
   );
