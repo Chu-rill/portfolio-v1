@@ -1,0 +1,14 @@
+ {
+    "id": "chatspace",
+    "title": "ChatSpace",
+    "description": "A real-time full-stack chat application using React, Express, and MongoDB, featuring serverless functions hosted on Google Cloud.",
+    "enhancedDetails": "Delivers instant message delivery under 150ms with real-time updates via Socket.IO. Utilizes Firebase authentication and Google Cloud Functions for serverless scalability, enabling smooth media sharing and responsive UI across devices.",
+    "tags": ["React", "Express", "MongoDB", "Socket.io"],
+    "image": "/images/project3.png",
+    "links": {
+      "live": "https://chat-space-sand.vercel.app/",
+      "github": "https://github.com/Chu-rill/ChatSpace"
+    },
+    "featured": false,
+    "status": "completed"
+  }
