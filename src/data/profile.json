@@ -1,14 +1,14 @@
 {
   "name": "Churchill ",
   "role": "Full-Stack Developer",
-  "location": "Ottawa, CAN",
+  "location": "Hamilton, CAN",
   "tagline": "I build fast,scalable, delightful web applications that users love.",
   "bio": "I’m Churchill Daniel, a full-stack developer and problem solver passionate about crafting scalable, user-focused digital products that blend solid engineering with thoughtful design. I love transforming ideas into reliable software — from backend systems to polished interfaces — that deliver measurable impact. Over the years, I’ve built a diverse portfolio of production-ready projects spanning web applications, SaaS tools, and AI-driven platforms. My work focuses on clean architecture, performance optimization, and developer experience, ensuring every product I build is maintainable, efficient, and future-proof.",
   "email": "churchilldaniel687@gmail.com",
   "phone": "+1 (613) 355-0154",
   "availability": "Available for new opportunities",
   "yearsExperience": 3,
-  "image": "/images/profile2.jpeg",
+  "image": "/images/profile2.png",
   "resume": "/Resume.pdf",
   "socials": {
     "github": "https://github.com/Chu-rill",
