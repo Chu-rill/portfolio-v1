@@ -96,7 +96,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
             <motion.div className="space-y-8" variants={fadeInUp}>
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                  Hi there! I'm {profile.name.split(" ")[0]}
+                  Hi, I'm {profile.name.split(" ")[0]}
                 </h3>
 
                 <div className="prose prose-lg dark:prose-invert max-w-none">

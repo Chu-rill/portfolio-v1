@@ -80,7 +80,7 @@ export function Hero({ profile }: HeroProps) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Hello, I'm
+            Hi, I'm
           </motion.p>
 
           {/* Name */}
