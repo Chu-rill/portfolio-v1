@@ -13,12 +13,26 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
     "color": "#3178C6"
   },
+   {
+    "name": "Java",
+    "category": "languages",
+    "level": 80,
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg",
+    "color": "#F89820"
+  },
   {
     "name": "Node.js",
     "category": "frameworks",
     "level": 85,
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
     "color": "#339933"
+  },
+    {
+    "name": "Spring Boot",
+    "category": "frameworks",
+    "level": 85,
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+    "color": "#6DB33F"
   },
   {
     "name": "Tailwind CSS",

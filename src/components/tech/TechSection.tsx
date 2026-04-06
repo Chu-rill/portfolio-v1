@@ -66,7 +66,7 @@ function SkillCard({ skill }: { skill: Skill }) {
       </div>
 
       {/* Progress Bar */}
-      <div className=" flex items-center space-x-5">
+      {/* <div className=" flex items-center space-x-5">
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
           <motion.div
             className="h-3 rounded-full"
@@ -78,7 +78,7 @@ function SkillCard({ skill }: { skill: Skill }) {
           />
         </div>
         <p>{`${skill.level}%`}</p>
-      </div>
+      </div> */}
     </motion.div>
   );
 }
