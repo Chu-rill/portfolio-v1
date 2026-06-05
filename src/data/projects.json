@@ -75,5 +75,19 @@
     },
     "featured": false,
     "status": "completed"
+  },
+  {
+    "id": "world-unemployed-friends-day",
+    "title": "World Unemployed Friends Day",
+    "description": "A satirical holiday website built as a lighthearted outlet during the job search grind. Celebrates the friends who are always free, always available, and perpetually 'between opportunities.'",
+    "enhancedDetails": "Gained 200+ views within the first 24 hours of launch. Features animated floating emojis, a live streak countdown, scroll-reveal animations, and a scrolling marquee all built with React and Tailwind. Deployed as a single-page experience with zero backend required.",
+    "tags": ["React", "Tailwind", "Vite"],
+    "image": "/images/project8.png",
+    "links": {
+      "live": "https://free-food-location-123.vercel.app/",
+      "github": "https://github.com/Chu-rill/unemployed"
+    },
+    "featured": false,
+    "status": "completed"
   }
 ]
