@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import {
   Mail,
   Send,
@@ -94,23 +95,26 @@ export function ContactForm({ profile }: ContactFormProps) {
     setSubmitStatus("idle");
 
     try {
-      // Simulate form submission - in a real app, you'd send this to your backend
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject || "Contact from Portfolio",
+        message: formData.message,
+        to_email: profile.email,
+      };
 
-      // For now, we'll create a mailto link as fallback
-      const subject = encodeURIComponent(
-        formData.subject || "Contact from Portfolio"
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
-      const body = encodeURIComponent(
-        `Hi,\n\nMy name is ${formData.name}.\n\n${formData.message}\n\nBest regards,\n${formData.name}\n${formData.email}`
-      );
-      const mailtoLink = `mailto:${profile.email}?subject=${subject}&body=${body}`;
-
-      window.open(mailtoLink, "_self");
 
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
+      console.error("Email send error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -118,7 +122,7 @@ export function ContactForm({ profile }: ContactFormProps) {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -247,9 +251,9 @@ export function ContactForm({ profile }: ContactFormProps) {
             </motion.div>
 
             {/* Contact Form */}
-            <motion.div variants={fadeInUp}>
+            {/* <motion.div variants={fadeInUp}>
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name and Email Row */}
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label
@@ -308,7 +312,7 @@ export function ContactForm({ profile }: ContactFormProps) {
                   </div>
                 </div>
 
-                {/* Subject */}
+
                 <div>
                   <label
                     htmlFor="subject"
@@ -327,7 +331,7 @@ export function ContactForm({ profile }: ContactFormProps) {
                   />
                 </div>
 
-                {/* Message */}
+
                 <div>
                   <label
                     htmlFor="message"
@@ -356,7 +360,7 @@ export function ContactForm({ profile }: ContactFormProps) {
                   )}
                 </div>
 
-                {/* Submit Button */}
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -375,7 +379,7 @@ export function ContactForm({ profile }: ContactFormProps) {
                   )}
                 </button>
 
-                {/* Status Messages */}
+
                 {submitStatus === "success" && (
                   <div className="p-4 rounded-lg bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 flex items-center">
                     <CheckCircle className="h-5 w-5 mr-2" />
@@ -391,7 +395,7 @@ export function ContactForm({ profile }: ContactFormProps) {
                   </div>
                 )}
               </form>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </Container>
