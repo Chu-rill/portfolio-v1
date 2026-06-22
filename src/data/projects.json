@@ -70,7 +70,6 @@
     "tags": ["React", "MongoDB", "Express"],
     "image": "/images/project7.png",
     "links": {
-      "live": "https://trivio-chi.vercel.app/",
       "github": "https://github.com/Chu-rill/Quiz_app"
     },
     "featured": false,
