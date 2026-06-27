@@ -1,0 +1,40 @@
+[
+  {
+    "id": "cert-1",
+    "name": "AWS Certified Solutions Architect",
+    "issuer": "Amazon Web Services",
+    "issueDate": "2024-01",
+    "expiryDate": "2027-01",
+    "credentialId": "AWS-SA-12345",
+    "credentialUrl": "https://www.credly.com/badges/example",
+    "description": "Validates expertise in designing distributed systems on AWS",
+    "skills": ["AWS", "Cloud Architecture", "System Design"],
+    "logo": "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
+    "featured": true
+  },
+  {
+    "id": "cert-2",
+    "name": "Google Cloud Professional Developer",
+    "issuer": "Google Cloud",
+    "issueDate": "2023-06",
+    "expiryDate": "2025-06",
+    "credentialId": "GCP-DEV-67890",
+    "credentialUrl": "https://www.credential.net/example",
+    "description": "Professional-level certification for cloud application development",
+    "skills": ["GCP", "Cloud Development", "Kubernetes"],
+    "logo": "https://templates.images.credential.net/16590187933301617801540872729153.png",
+    "featured": true
+  },
+  {
+    "id": "cert-3",
+    "name": "MongoDB Certified Developer",
+    "issuer": "MongoDB University",
+    "issueDate": "2023-03",
+    "credentialId": "MONGO-DEV-11223",
+    "credentialUrl": "https://university.mongodb.com/exam/certificate/example",
+    "description": "Demonstrates proficiency in MongoDB database development",
+    "skills": ["MongoDB", "NoSQL", "Database Design"],
+    "logo": "https://webimages.mongodb.com/_com_assets/cms/kuyjf3vea2hg34taa-horizontal_default_slate_blue.svg?auto=format%252Ccompress",
+    "featured": false
+  }
+]

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Calendar, Briefcase } from "lucide-react";
+import { MapPin, Calendar, Briefcase, CheckCircle2, TrendingUp } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
 import type { Experience } from "../../types";
@@ -47,41 +47,50 @@ function ExperienceCard({ experience }: { experience: Experience }) {
   };
 
   return (
-    <motion.div variants={fadeInUp} className="relative">
-      {/* Timeline connector */}
-      <div className="hidden md:flex absolute left-8 top-16 bottom-0 w-px bg-gray-300 dark:bg-gray-600"></div>
+    <motion.div
+      variants={fadeInUp}
+      whileHover={{ x: 8 }}
+      className="relative mb-12 last:mb-0"
+    >
+      {/* Enhanced Timeline connector */}
+      <div className="hidden md:block absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-brand-500 via-brand-400 to-transparent"></div>
 
-      {/* Timeline dot */}
-      <div className="hidden md:flex absolute left-6 top-8 w-5 h-5 bg-brand-500 rounded-full border-4 border-white dark:border-background-dark shadow-lg"></div>
+      {/* Enhanced Timeline dot with pulse animation */}
+      <div className="hidden md:flex absolute left-6 top-8 w-5 h-5">
+        <div className="absolute inset-0 bg-brand-500 rounded-full animate-ping opacity-20"></div>
+        <div className="relative w-5 h-5 bg-gradient-to-br from-brand-400 to-brand-600 rounded-full border-4 border-white dark:border-background-dark shadow-lg"></div>
+      </div>
 
       <div className="md:ml-16">
-        <div className="card p-8 hover:shadow-xl transition-all duration-300 group">
+        <div className="group relative overflow-hidden rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:border-brand-400 dark:hover:border-brand-500 p-8 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-500">
+          {/* Background Gradient on Hover */}
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-500/0 via-brand-400/0 to-brand-600/0 group-hover:from-brand-500/5 group-hover:via-brand-400/5 group-hover:to-brand-600/5 transition-all duration-500 pointer-events-none" />
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-brand-500 dark:group-hover:text-brand-400 transition-colors">
-                {experience.role}
-              </h3>
-              <div className="flex items-center space-x-2 mb-2">
-                <span className="text-lg font-medium text-brand-500 dark:text-brand-400">
-                  {experience.company}
-                </span>
-                {/* {experience.companyUrl && (
-                  <a
-                    href={experience.companyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-brand-500 dark:hover:text-brand-400 transition-colors"
-                    aria-label={`Visit ${experience.company}`}
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                )} */}
+          <div className="relative z-10 flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+            <div className="mb-4 md:mb-0 flex-1">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-gradient transition-all duration-300">
+                    {experience.role}
+                  </h3>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl font-semibold text-brand-600 dark:text-brand-400">
+                      {experience.company}
+                    </span>
+                    {experience.current && (
+                      <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold">
+                        <TrendingUp className="w-3 h-3" />
+                        <span>Current Position</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
-                <div className="flex items-center space-x-1">
-                  <Calendar className="h-4 w-4" />
-                  <span>
+
+              <div className="flex flex-wrap items-center gap-4 text-sm">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                  <Calendar className="h-4 w-4 text-brand-500" />
+                  <span className="font-medium">
                     {formatDate(experience.startDate)} -{" "}
                     {experience.endDate
                       ? formatDate(experience.endDate)
@@ -89,63 +98,70 @@ function ExperienceCard({ experience }: { experience: Experience }) {
                   </span>
                 </div>
                 {experience.location && (
-                  <div className="flex items-center space-x-1">
-                    <MapPin className="h-4 w-4" />
-                    <span>{experience.location}</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                    <MapPin className="h-4 w-4 text-brand-500" />
+                    <span className="font-medium">{experience.location}</span>
                   </div>
                 )}
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-2">
-              {experience.current && (
-                <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full">
-                  Current
+                <span
+                  className={`px-3 py-1.5 text-xs font-semibold rounded-lg capitalize ${
+                    typeColors[experience.type]
+                  }`}
+                >
+                  {experience.type.replace("-", " ")}
                 </span>
-              )}
-              <span
-                className={`px-3 py-1 text-xs font-medium rounded-full capitalize ${
-                  typeColors[experience.type]
-                }`}
-              >
-                {experience.type.replace("-", " ")}
-              </span>
+              </div>
             </div>
           </div>
 
           {/* Highlights */}
-          <div className="mb-6">
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-              <Briefcase className="h-4 w-4 mr-2" />
+          <div className="relative z-10 mb-6">
+            <h4 className="text-base font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <div className="p-2 rounded-lg bg-brand-100 dark:bg-brand-900/20">
+                <Briefcase className="h-4 w-4 text-brand-600 dark:text-brand-400" />
+              </div>
               Key Achievements
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {experience.highlights.map((highlight, highlightIndex) => (
-                <li
+                <motion.li
                   key={highlightIndex}
-                  className="flex items-start space-x-3 text-gray-600 dark:text-gray-300"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: highlightIndex * 0.1 }}
+                  className="flex items-start gap-3 text-gray-700 dark:text-gray-300 group/item"
                 >
-                  <div className="w-1.5 h-1.5 bg-brand-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="leading-relaxed">{highlight}</span>
-                </li>
+                  <div className="flex-shrink-0 mt-1">
+                    <CheckCircle2 className="w-5 h-5 text-green-500 group-hover/item:scale-110 transition-transform" />
+                  </div>
+                  <span className="leading-relaxed text-sm md:text-base">
+                    {highlight}
+                  </span>
+                </motion.li>
               ))}
             </ul>
           </div>
 
           {/* Technologies */}
           {experience.technologies && experience.technologies.length > 0 && (
-            <div>
+            <div className="relative z-10">
               <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
                 Technologies Used
               </h4>
               <div className="flex flex-wrap gap-2">
-                {experience.technologies.map((tech) => (
-                  <span
+                {experience.technologies.map((tech, idx) => (
+                  <motion.span
                     key={tech}
-                    className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                    className="px-3 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/20 text-brand-700 dark:text-brand-300 rounded-full hover:bg-brand-100 dark:hover:bg-brand-900/30 transition-all duration-300 cursor-default border border-brand-200 dark:border-brand-800"
                   >
                     {tech}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </div>

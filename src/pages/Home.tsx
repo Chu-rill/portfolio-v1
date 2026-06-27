@@ -5,22 +5,32 @@ import { AboutSection } from "../components/about/AboutSection";
 import { ProjectsGrid } from "../components/projects/ProjectsGrid";
 import { TechSection } from "../components/tech/TechSection";
 import { ExperienceSection } from "../components/experience/ExperienceSection";
+import { CertificationsSection } from "../components/certifications/CertificationsSection";
 import { ContactForm } from "../components/contact/ContactForm";
 import { Footer } from "../components/footer/Footer";
+import { ScrollToTop } from "../components/common/ScrollToTop";
 
 // Import data
 import profileData from "../data/profile.json";
 import projectsData from "../data/projects.json";
 import experienceData from "../data/experience.json";
 import skillsData from "../data/skills.json";
+import certificationsData from "../data/certifications.json";
 
 // Import types
-import type { Profile, Project, Experience, Skill } from "../types";
+import type {
+  Profile,
+  Project,
+  Experience,
+  Skill,
+  Certification,
+} from "../types";
 
 const profile = profileData as Profile;
 const projects = projectsData as Project[];
 const experiences = experienceData as Experience[];
 const skills = skillsData as Skill[];
+const certifications = certificationsData as Certification[];
 
 export function Home() {
   return (
@@ -98,10 +108,12 @@ export function Home() {
           <ProjectsGrid projects={projects} />
           <TechSection skills={skills} />
           <ExperienceSection experiences={experiences} />
+          {/* <CertificationsSection certifications={certifications} /> */}
           <ContactForm profile={profile} />
         </main>
 
         <Footer profile={profile} />
+        <ScrollToTop />
       </div>
     </>
   );

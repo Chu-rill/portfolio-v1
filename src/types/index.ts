@@ -71,3 +71,17 @@ export interface SocialLink {
   icon: string;
   color?: string;
 }
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  issueDate: string;
+  expiryDate?: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  description: string;
+  skills?: string[];
+  logo?: string;
+  featured: boolean;
+}
