@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { formatPostDate } from "../../lib/blog";
 import type { BlogPost } from "../../types";
@@ -12,7 +12,7 @@ const fadeInUp = {
 
 export function BlogCard({ post }: { post: BlogPost }) {
   return (
-    <motion.article
+    <m.article
       variants={fadeInUp}
       whileHover={{ y: -6 }}
       className="group relative flex flex-col h-full overflow-hidden rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:border-brand-400 dark:hover:border-brand-500 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-500"
@@ -23,6 +23,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
             src={post.cover}
             alt=""
             loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         </div>
@@ -73,6 +74,6 @@ export function BlogCard({ post }: { post: BlogPost }) {
           <ArrowRight className="h-4 w-4 shrink-0 text-brand-500 group-hover:translate-x-1 transition-transform" />
         </div>
       </div>
-    </motion.article>
+    </m.article>
   );
 }

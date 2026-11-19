@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { MapPin, Calendar, Briefcase, CheckCircle2, TrendingUp } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
@@ -47,7 +47,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
   };
 
   return (
-    <motion.div
+    <m.div
       variants={fadeInUp}
       whileHover={{ x: 8 }}
       className="relative mb-12 last:mb-0"
@@ -124,7 +124,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
             </h4>
             <ul className="space-y-3">
               {experience.highlights.map((highlight, highlightIndex) => (
-                <motion.li
+                <m.li
                   key={highlightIndex}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -138,7 +138,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
                   <span className="leading-relaxed text-sm md:text-base">
                     {highlight}
                   </span>
-                </motion.li>
+                </m.li>
               ))}
             </ul>
           </div>
@@ -151,7 +151,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
               </h4>
               <div className="flex flex-wrap gap-2">
                 {experience.technologies.map((tech, idx) => (
-                  <motion.span
+                  <m.span
                     key={tech}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -161,14 +161,14 @@ function ExperienceCard({ experience }: { experience: Experience }) {
                     className="px-3 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/20 text-brand-700 dark:text-brand-300 rounded-full hover:bg-brand-100 dark:hover:bg-brand-900/30 transition-all duration-300 cursor-default border border-brand-200 dark:border-brand-800"
                   >
                     {tech}
-                  </motion.span>
+                  </m.span>
                 ))}
               </div>
             </div>
           )}
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -183,7 +183,7 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
   return (
     <section id="experience" className="py-12 md:py-24 bg-white dark:bg-background-dark">
       <Container>
-        <motion.div
+        <m.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.1 }}
@@ -203,7 +203,7 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
           </div>
 
           {/* Summary Stats */}
-          <motion.div
+          <m.div
             variants={fadeInUp}
             className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"
           >
@@ -251,8 +251,8 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
                 Technologies Used
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </Container>
     </section>
   );

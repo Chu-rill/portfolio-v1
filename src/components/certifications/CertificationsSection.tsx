@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Award, ExternalLink, Calendar, CheckCircle2 } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
@@ -36,7 +36,7 @@ export function CertificationsSection({
     featured: boolean;
     index: number;
   }) => (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -148,7 +148,7 @@ export function CertificationsSection({
 
       {/* Hover Effect Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-500/0 via-brand-400/0 to-brand-600/0 group-hover:from-brand-500/5 group-hover:via-brand-400/5 group-hover:to-brand-600/5 transition-all duration-500 pointer-events-none" />
-    </motion.div>
+    </m.div>
   );
 
   return (
@@ -172,7 +172,7 @@ export function CertificationsSection({
         {/* Featured Certifications */}
         {featuredCerts.length > 0 && (
           <div className="mb-12">
-            <motion.h3
+            <m.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -180,7 +180,7 @@ export function CertificationsSection({
             >
               <Award className="w-6 h-6 text-brand-500" />
               Featured Certifications
-            </motion.h3>
+            </m.h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredCerts.map((cert, index) => (
                 <CertificationCard
@@ -197,14 +197,14 @@ export function CertificationsSection({
         {/* Other Certifications */}
         {otherCerts.length > 0 && (
           <div>
-            <motion.h3
+            <m.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-xl font-bold text-gray-900 dark:text-white mb-6"
             >
               Additional Certifications
-            </motion.h3>
+            </m.h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherCerts.map((cert, index) => (
                 <CertificationCard
@@ -220,7 +220,7 @@ export function CertificationsSection({
 
         {/* Empty State */}
         {certifications.length === 0 && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -230,7 +230,7 @@ export function CertificationsSection({
             <p className="text-gray-500 dark:text-gray-500 text-lg">
               Certifications coming soon...
             </p>
-          </motion.div>
+          </m.div>
         )}
       </Container>
     </section>

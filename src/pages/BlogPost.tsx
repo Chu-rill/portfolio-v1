@@ -1,20 +1,19 @@
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
 import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
 import { Navbar } from "../components/nav/Navbar";
 import { Footer } from "../components/footer/Footer";
 import { Container } from "../components/common/Container";
 import { ScrollToTop } from "../components/common/ScrollToTop";
+import { CodeBlock } from "../components/blog/CodeBlock";
 import { formatPostDate, getAllPosts, getPostBySlug } from "../lib/blog";
 import { NotFound } from "./NotFound";
 import profileData from "../data/profile.json";
 import type { Profile } from "../types";
-import "highlight.js/styles/github-dark.css";
 
 const profile = profileData as Profile;
 
@@ -82,7 +81,7 @@ export function BlogPost() {
               All posts
             </Link>
 
-            <motion.article
+            <m.article
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
@@ -122,7 +121,6 @@ export function BlogPost() {
               <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:scroll-mt-24 prose-a:text-brand-600 dark:prose-a:text-brand-400 prose-code:before:content-none prose-code:after:content-none prose-pre:p-0 prose-pre:bg-transparent prose-img:rounded-xl">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
-                  rehypePlugins={[rehypeHighlight]}
                   components={{
                     // External links open in a new tab; internal ones stay in the SPA.
                     a: ({ href = "", children, ...props }) =>
@@ -133,15 +131,13 @@ export function BlogPost() {
                           {children}
                         </a>
                       ),
-                    pre: ({ children }) => (
-                      <pre className="rounded-xl overflow-x-auto text-sm">{children}</pre>
-                    ),
+                    pre: ({ children }) => <CodeBlock>{children}</CodeBlock>,
                   }}
                 >
                   {post.content}
                 </ReactMarkdown>
               </div>
-            </motion.article>
+            </m.article>
 
             {(newer || older) && (
               <nav

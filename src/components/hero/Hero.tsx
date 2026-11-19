@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   ArrowDown,
   Download,
@@ -68,53 +68,53 @@ export function Hero({ profile }: HeroProps) {
       </div>
 
       <Container className="relative z-10 text-center">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* Greeting */}
-          <motion.p
+          <m.p
             className="text-brand-500 dark:text-brand-400 font-medium text-lg mb-4 mt-16"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             Hi, I'm
-          </motion.p>
+          </m.p>
 
           {/* Name */}
-          <motion.h1
+          <m.h1
             className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             <span className="text-gradient">{profile.name}</span>
-          </motion.h1>
+          </m.h1>
 
           {/* Role */}
-          <motion.h2
+          <m.h2
             className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-600 dark:text-gray-300 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             {profile.role}
-          </motion.h2>
+          </m.h2>
 
           {/* Tagline */}
-          <motion.p
+          <m.p
             className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             {profile.tagline}
-          </motion.p>
+          </m.p>
 
           {/* CTA Buttons */}
-          <motion.div
+          <m.div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -147,10 +147,10 @@ export function Hero({ profile }: HeroProps) {
                 <Download className="ml-2 h-4 w-4" />
               </a>
             )}
-          </motion.div>
+          </m.div>
 
           {/* Social Links */}
-          <motion.div
+          <m.div
             className="flex items-center justify-center space-x-6 mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -168,10 +168,10 @@ export function Hero({ profile }: HeroProps) {
                 <social.icon className="h-6 w-6" />
               </a>
             ))}
-          </motion.div>
+          </m.div>
 
           {/* Scroll indicator */}
-          <motion.button
+          <m.button
             onClick={() => scrollToSection("about")}
             className="text-gray-400 dark:text-gray-500 hover:text-brand-500 dark:hover:text-brand-400 transition-colors animate-bounce"
             initial={{ opacity: 0 }}
@@ -180,8 +180,8 @@ export function Hero({ profile }: HeroProps) {
             aria-label="Scroll to about section"
           >
             <ArrowDown className="h-6 w-6 mx-auto" />
-          </motion.button>
-        </motion.div>
+          </m.button>
+        </m.div>
       </Container>
     </section>
   );

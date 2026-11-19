@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Mail,
   Send,
@@ -94,7 +94,7 @@ export function ContactForm({ profile }: ContactFormProps) {
       </div>
 
       <Container>
-        <motion.div
+        <m.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.3 }}
@@ -108,7 +108,7 @@ export function ContactForm({ profile }: ContactFormProps) {
 
           <div className="max-w-5xl mx-auto">
             {/* Contact Information */}
-            <motion.div variants={fadeInUp} className="space-y-12">
+            <m.div variants={fadeInUp} className="space-y-12">
               {/* Main CTA */}
               <div className="text-center max-w-3xl mx-auto">
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
@@ -145,7 +145,7 @@ export function ContactForm({ profile }: ContactFormProps) {
               {/* Contact Methods Grid */}
               <div className="grid md:grid-cols-3 gap-6">
                 {contactMethods.map((method, index) => (
-                  <motion.div
+                  <m.div
                     key={method.label}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -182,7 +182,7 @@ export function ContactForm({ profile }: ContactFormProps) {
                       {/* Decorative Corner */}
                       <div className={`absolute top-0 right-0 w-16 h-16 ${method.color} opacity-5 rounded-bl-full`} />
                     </div>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
 
@@ -193,7 +193,7 @@ export function ContactForm({ profile }: ContactFormProps) {
                 </h4>
                 <div className="flex flex-wrap justify-center gap-4">
                   {socialLinks.map((social, index) => (
-                    <motion.a
+                    <m.a
                       key={social.name}
                       href={social.url}
                       target="_blank"
@@ -213,14 +213,14 @@ export function ContactForm({ profile }: ContactFormProps) {
                       <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1 rounded-lg bg-gray-900 dark:bg-gray-700 text-white text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                         {social.name}
                       </div>
-                    </motion.a>
+                    </m.a>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
           </div>
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

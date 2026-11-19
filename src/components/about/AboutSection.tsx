@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { MapPin, Calendar, Award, Download } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
@@ -101,7 +101,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
   return (
     <section id="about" className="py-24 bg-gray-50 dark:bg-gray-900/50">
       <Container>
-        <motion.div
+        <m.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.3 }}
@@ -115,13 +115,17 @@ export function AboutSection({ profile }: AboutSectionProps) {
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image Section */}
-            <motion.div className="relative" variants={fadeInUp}>
+            <m.div className="relative" variants={fadeInUp}>
               <div className="relative z-10 group">
                 {profile.image ? (
                   <div className="relative">
                     <img
                       src={profile.image}
                       alt={profile.name}
+                      width={800}
+                      height={1067}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full max-w-md mx-auto rounded-2xl shadow-2xl ring-4 ring-brand-500/20 dark:ring-brand-400/20 group-hover:ring-brand-500/40 dark:group-hover:ring-brand-400/40 transition-all duration-500"
                     />
                   </div>
@@ -139,10 +143,10 @@ export function AboutSection({ profile }: AboutSectionProps) {
               <div className="absolute -top-4 -right-4 w-32 h-32 bg-brand-500/20 dark:bg-brand-400/20 rounded-full blur-3xl animate-pulse"></div>
               <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-purple-500/20 dark:bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-brand-500/5 to-purple-500/5 rounded-3xl blur-2xl"></div>
-            </motion.div>
+            </m.div>
 
             {/* Content Section */}
-            <motion.div className="space-y-8" variants={fadeInUp}>
+            <m.div className="space-y-8" variants={fadeInUp}>
               <div className="space-y-6">
                 <div>
                   <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -178,12 +182,12 @@ export function AboutSection({ profile }: AboutSectionProps) {
               </div>
 
               {/* Stats Grid */}
-              <motion.div
+              <m.div
                 className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
                 variants={stagger}
               >
                 {stats.map((stat, index) => (
-                  <motion.div
+                  <m.div
                     key={stat.label}
                     variants={fadeInUp}
                     whileHover={{ y: -5 }}
@@ -219,12 +223,12 @@ export function AboutSection({ profile }: AboutSectionProps) {
                     <div
                       className={`absolute top-0 right-0 w-16 h-16 ${stat.color} opacity-5 rounded-bl-full`}
                     />
-                  </motion.div>
+                  </m.div>
                 ))}
-              </motion.div>
+              </m.div>
 
               {/* Contact Info */}
-              <motion.div
+              <m.div
                 variants={fadeInUp}
                 className="pt-6 border-t border-gray-200 dark:border-gray-700"
               >
@@ -255,10 +259,10 @@ export function AboutSection({ profile }: AboutSectionProps) {
                     </div>
                   )}
                 </div>
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
           </div>
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

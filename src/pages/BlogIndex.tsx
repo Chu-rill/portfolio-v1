@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Navbar } from "../components/nav/Navbar";
 import { Footer } from "../components/footer/Footer";
 import { Container } from "../components/common/Container";
@@ -81,7 +81,7 @@ export function BlogIndex() {
             )}
 
             {visiblePosts.length > 0 ? (
-              <motion.div
+              <m.div
                 key={activeTag ?? "all"}
                 initial="initial"
                 animate="animate"
@@ -91,7 +91,7 @@ export function BlogIndex() {
                 {visiblePosts.map((post) => (
                   <BlogCard key={post.slug} post={post} />
                 ))}
-              </motion.div>
+              </m.div>
             ) : (
               <p className="text-center text-gray-500 dark:text-gray-400 py-16">
                 {activeTag

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Code, Database, Wrench, Layers } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
@@ -38,7 +38,7 @@ const categoryColors = {
 // Skill Card (uses Devicon for individual skill icons)
 function SkillCard({ skill }: { skill: Skill }) {
   return (
-    <motion.div
+    <m.div
       variants={fadeInUp}
       className="group relative  rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg transition-all duration-300"
     >
@@ -52,7 +52,15 @@ function SkillCard({ skill }: { skill: Skill }) {
         >
           {skill.icon ? (
             // <i className={`${skill.icon} text-2xl`} />
-            <img src={skill.icon} alt={skill.name} className="h-8 w-8" />
+            <img
+              src={skill.icon}
+              alt={skill.name}
+              width={32}
+              height={32}
+              loading="lazy"
+              decoding="async"
+              className="h-8 w-8"
+            />
           ) : (
             skill.name.substring(0, 2).toUpperCase()
           )}
@@ -68,7 +76,7 @@ function SkillCard({ skill }: { skill: Skill }) {
       {/* Progress Bar */}
       {/* <div className=" flex items-center space-x-5">
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
-          <motion.div
+          <m.div
             className="h-3 rounded-full"
             initial={{ width: 0 }}
             whileInView={{ width: `${skill.level}%` }}
@@ -79,7 +87,7 @@ function SkillCard({ skill }: { skill: Skill }) {
         </div>
         <p>{`${skill.level}%`}</p>
       </div> */}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -94,7 +102,7 @@ function SkillCategory({
   icon: React.ComponentType<{ className?: string }>;
 }) {
   return (
-    <motion.div variants={fadeInUp} className="mb-12">
+    <m.div variants={fadeInUp} className="mb-12">
       <div className="flex items-center space-x-3 mb-6">
         <div
           className={`w-10 h-10 rounded-lg bg-gradient-to-r ${
@@ -116,7 +124,7 @@ function SkillCategory({
           <SkillCard key={skill.name} skill={skill} />
         ))}
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -135,7 +143,7 @@ export function TechSection({ skills }: { skills: Skill[] }) {
   return (
     <section id="skills" className="py-12 md:py-24 bg-gray-50 dark:bg-gray-900/50">
       <Container>
-        <motion.div
+        <m.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.1 }}
@@ -148,7 +156,7 @@ export function TechSection({ skills }: { skills: Skill[] }) {
           />
 
           {/* Overview Stats */}
-          <motion.div
+          <m.div
             variants={fadeInUp}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-16"
           >
@@ -178,7 +186,7 @@ export function TechSection({ skills }: { skills: Skill[] }) {
                 );
               }
             )}
-          </motion.div>
+          </m.div>
 
           {/* Skills by Category */}
           <div className="space-y-12">
@@ -197,7 +205,7 @@ export function TechSection({ skills }: { skills: Skill[] }) {
               );
             })}
           </div>
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

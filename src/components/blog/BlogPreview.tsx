@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
@@ -22,7 +22,7 @@ export function BlogPreview({ posts }: BlogPreviewProps) {
   return (
     <section id="blog" className="py-12 md:py-24 bg-white dark:bg-background-dark">
       <Container>
-        <motion.div
+        <m.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.1 }}
@@ -34,14 +34,14 @@ export function BlogPreview({ posts }: BlogPreviewProps) {
             center
           />
 
-          <motion.div
+          <m.div
             variants={stagger}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {posts.map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}
-          </motion.div>
+          </m.div>
 
           <div className="text-center mt-12">
             <Link to="/blog" className="btn-secondary inline-flex items-center group">
@@ -49,7 +49,7 @@ export function BlogPreview({ posts }: BlogPreviewProps) {
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

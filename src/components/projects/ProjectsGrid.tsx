@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ExternalLink, Github, Eye, Clock } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
@@ -96,7 +96,7 @@ function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
-    <motion.div
+    <m.div
       variants={fadeInUp}
       whileHover={{ y: -8 }}
       className="group relative overflow-hidden rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:border-brand-400 dark:hover:border-brand-500 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-500 flex flex-col h-full"
@@ -108,6 +108,10 @@ function ProjectCard({ project }: { project: Project }) {
             <img
               src={project.image}
               alt={project.title}
+              width={1200}
+              height={600}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
             {/* Overlay on Hover */}
@@ -172,7 +176,7 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -186,7 +190,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
       className="py-12 md:py-24 bg-white dark:bg-background-dark"
     >
       <Container>
-        <motion.div
+        <m.div
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.1 }}
@@ -202,44 +206,44 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
           <>
             {/* Featured Projects */}
             {featuredProjects.length > 0 && (
-              <motion.div
+              <m.div
                 className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-16"
                 variants={stagger}
               >
                 {featuredProjects.map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}
-              </motion.div>
+              </m.div>
             )}
 
             {/* Other Projects */}
             {otherProjects.length > 0 && (
               <>
                 {featuredProjects.length > 0 && (
-                  <motion.div variants={fadeInUp} className="text-center mb-12">
+                  <m.div variants={fadeInUp} className="text-center mb-12">
                     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                       Other Notable Projects
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300">
                       Additional projects that showcase my skills and experience
                     </p>
-                  </motion.div>
+                  </m.div>
                 )}
 
-                <motion.div
+                <m.div
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                   variants={stagger}
                 >
                   {otherProjects.map((project) => (
                     <ProjectCard key={project.id} project={project} />
                   ))}
-                </motion.div>
+                </m.div>
               </>
             )}
           </>
 
           {/* View More Button */}
-          <motion.div variants={fadeInUp} className="text-center mt-12">
+          <m.div variants={fadeInUp} className="text-center mt-12">
             <a
               href="#contact"
               className="btn-primary inline-flex items-center group"
@@ -259,8 +263,8 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
               Interested in working together?
               <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </Container>
     </section>
   );
