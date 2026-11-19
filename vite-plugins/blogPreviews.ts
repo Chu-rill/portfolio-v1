@@ -17,7 +17,7 @@ import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
-import { parsePost } from "../src/lib/parsePost";
+import { parsePost, previewImagePath } from "../src/lib/parsePost";
 import type { BlogPost, Profile } from "../src/types";
 
 const require = createRequire(import.meta.url);
@@ -311,8 +311,8 @@ export function blogPreviews(): Plugin {
       };
 
       for (const post of posts) {
-        let image = post.cover ?? `/og/${post.slug}.png`;
-        if (!post.cover) {
+        let image = previewImagePath(post);
+        if (image.startsWith("/og/")) {
           fs.writeFileSync(
             path.join(outDir, "og", `${post.slug}.png`),
             await renderPreviewImage(postCard(post, profile)),

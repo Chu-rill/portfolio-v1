@@ -12,6 +12,7 @@ import { ScrollToTop } from "../components/common/ScrollToTop";
 import { CodeBlock } from "../components/blog/CodeBlock";
 import { ShareButton } from "../components/blog/ShareButton";
 import { formatPostDate, getAllPosts, getPostBySlug } from "../lib/blog";
+import { previewImagePath } from "../lib/parsePost";
 import { NotFound } from "./NotFound";
 import profileData from "../data/profile.json";
 import type { Profile } from "../types";
@@ -37,10 +38,7 @@ export function BlogPost() {
 
   const author = profile.name.trim();
   const url = `${window.location.origin}/blog/${post.slug}`;
-  const image = new URL(
-    post.cover ?? `/og/${post.slug}.png`,
-    window.location.origin,
-  ).href;
+  const image = new URL(previewImagePath(post), window.location.origin).href;
 
   return (
     <>

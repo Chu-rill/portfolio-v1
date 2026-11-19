@@ -1,9 +1,9 @@
 ---
 title: Supabase for Image Storage
 description: Why i Ditched Local File Systems.
-date: 2025-09-19
+date: 2025-08-19
 tags: [supabase, storage bucket]
-cover: /images/storage.webp,
+cover: /images/storage.webp
 draft: false
 ---
 

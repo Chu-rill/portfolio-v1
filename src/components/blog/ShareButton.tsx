@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, m } from "framer-motion";
 import { Check, Copy, Linkedin, Share2, Twitter } from "lucide-react";
+import { previewImagePath } from "../../lib/parsePost";
 import type { BlogPost } from "../../types";
 
 interface ShareButtonProps {
@@ -38,8 +39,8 @@ export function ShareButton({ post, openUpward = false, label = "Share" }: Share
   const menuId = useId();
 
   const url = `${window.location.origin}/blog/${post.slug}`;
-  // Generated at build time (and on demand in `npm run dev`) by vite-plugins/blogPreviews.ts.
-  const image = post.cover ?? `/og/${post.slug}.png`;
+  // Same image LinkedIn, X, etc. will show (see previewImagePath).
+  const image = previewImagePath(post);
   const canNativeShare = typeof navigator !== "undefined" && "share" in navigator;
 
   useEffect(() => {
