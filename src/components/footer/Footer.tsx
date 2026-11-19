@@ -1,5 +1,7 @@
+import { useLocation, useNavigate } from "react-router-dom";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Container } from "../common/Container";
+import { scrollToId } from "../../lib/scroll";
 import type { Profile } from "../../types";
 
 interface FooterProps {
@@ -8,12 +10,16 @@ interface FooterProps {
 
 export function Footer({ profile }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === "/";
 
   const quickLinks = [
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -25,17 +31,14 @@ export function Footer({ profile }: FooterProps) {
   ].filter((link) => link.url);
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      const offset = 80;
-      const top =
-        element.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: "smooth" });
-    }
+    if (href.startsWith("/")) navigate(href);
+    else if (isHome) scrollToId(href.substring(1));
+    else navigate(`/${href}`);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (isHome) window.scrollTo({ top: 0, behavior: "smooth" });
+    else navigate("/");
   };
 
   return (
@@ -52,13 +55,9 @@ export function Footer({ profile }: FooterProps) {
               >
                 {profile.name}
               </button>
-              <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
+              <p className="text-gray-400 max-w-md leading-relaxed">
                 {profile.tagline}
               </p>
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <span>{profile.availability}</span>
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              </div>
             </div>
 
             {/* Quick Links */}
@@ -128,31 +127,6 @@ export function Footer({ profile }: FooterProps) {
               <span>All rights reserved.</span>
             </div>
 
-            {/* Theme Toggle & Links */}
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-4 text-sm text-gray-400">
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert("Privacy policy would be linked here");
-                  }}
-                  className="hover:text-white transition-colors"
-                >
-                  Privacy
-                </a>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert("Terms would be linked here");
-                  }}
-                  className="hover:text-white transition-colors"
-                >
-                  Terms
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </Container>

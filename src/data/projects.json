@@ -5,7 +5,7 @@
     "description": "Modern real-time communication platform featuring instant messaging, HD video calls, screen sharing and collaborative rooms. Built with a Next.js frontend, a NestJS backend, PostgreSQL database, Socket.IO for real-time features, and WebRTC for peer-to-peer video calling.",
     "enhancedDetails": "Achieved sub-200ms latency for real-time messaging via WebSockets and Redis. Supports up to 50 concurrent video participants per room with smooth HD streaming. Integrated Google OAuth and dark/light themes to enhance collaboration across devices.",
     "tags": ["NextJs", "NestJs", "Redis", "Websockets", "WebRTC", "PostgreSQL"],
-    "image": "/images/project5.png",
+    "image": "/images/project5.webp",
     "links": {
       "live": "https://banter-dusky.vercel.app/",
       "github": "https://github.com/Chu-rill/Banter"
@@ -26,7 +26,7 @@
       "Unrealspeech",
       "TypeScript"
     ],
-    "image": "/images/project1.png",
+    "image": "/images/project1.webp",
     "links": {
       "live": "https://recapify-seven.vercel.app/",
       "github": "https://github.com/Chu-rill/Recapify"
@@ -40,7 +40,7 @@
     "description": "InnkeeperPro is a FullStack hotel management system used to view listed hotels, rooms and make bookings with an admin dashboard.",
     "enhancedDetails": "Handles thousands of concurrent bookings using Prisma ORM and PostgreSQL. Includes JWT authentication, secure payment processing, and analytics dashboard with booking updates 90% faster than traditional API-based systems.",
     "tags": ["React", "NestJs", "PostgreSQL", "Tailwind", "Prisma"],
-    "image": "/images/project4.png",
+    "image": "/images/project4.webp",
     "links": {
       "live": "https://innkeeperpro.vercel.app/",
       "github": "https://github.com/Chu-rill/hotel-management-client"
@@ -54,7 +54,7 @@
     "description": "StoryNest is a modern social blogging platform that enables users to share stories, experiences, and engage with a community of writers and readers.",
     "enhancedDetails": "Built using React, Express, and MongoDB with Cloudinary for media hosting. Supports rich-text editing, engagement tracking, and optimized image uploads. Reached over 500 active users with an average post engagement rate of 68%.",
     "tags": ["React", "MongoDB", "Express", "Cloudinary"],
-    "image": "/images/project2.png",
+    "image": "/images/project2.webp",
     "links": {
       "live": "https://story-nest-mu.vercel.app/",
       "github": "https://github.com/Chu-rill/StoryNest"
@@ -68,7 +68,7 @@
     "description": "A fullstack quiz application that allows users to create quizzes, answer questions from various categories.",
     "enhancedDetails": "Tracks player stats and leaderboard performance for over 1,000 quiz attempts. Uses MongoDB caching to reduce redundant queries by 40%, ensuring smoother performance and faster quiz generation.",
     "tags": ["React", "MongoDB", "Express"],
-    "image": "/images/project7.png",
+    "image": "/images/project7.webp",
     "links": {
       "github": "https://github.com/Chu-rill/Quiz_app"
     },
@@ -81,7 +81,7 @@
     "description": "A satirical holiday website built as a lighthearted outlet during the job search grind. Celebrates the friends who are always free, always available, and perpetually 'between opportunities.'",
     "enhancedDetails": "Gained 200+ views within the first 24 hours of launch. Features animated floating emojis, a live streak countdown, scroll-reveal animations, and a scrolling marquee all built with React and Tailwind. Deployed as a single-page experience with zero backend required.",
     "tags": ["React", "Tailwind", "Vite"],
-    "image": "/images/project8.png",
+    "image": "/images/project8.webp",
     "links": {
       "live": "https://free-food-location-123.vercel.app/",
       "github": "https://github.com/Chu-rill/unemployed"

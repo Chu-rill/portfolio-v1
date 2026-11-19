@@ -1,16 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
-
-type Theme = "dark" | "light";
-
-interface ThemeContextType {
-  theme: Theme;
-  toggle: () => void;
-}
-
-const ThemeContext = createContext<ThemeContextType>({
-  theme: "dark",
-  toggle: () => {},
-});
+import { useEffect, useState } from "react";
+import { ThemeContext, type Theme } from "./themeContext";
 
 // Helper function to get initial theme
 const getInitialTheme = (): Theme => {
@@ -36,7 +25,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   useEffect(() => {
-    console.log("Theme changed to:", theme);
     const root = document.documentElement;
 
     // Remove both classes first
@@ -48,7 +36,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     // Save theme preference to localStorage
     localStorage.setItem("theme", theme);
 
-    console.log("Classes on html element:", root.classList.toString());
   }, [theme]);
 
   // Listen for system theme changes
@@ -70,10 +57,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const toggle = () => {
-    console.log("Toggle clicked, current theme:", theme);
     setTheme((prevTheme) => {
       const newTheme = prevTheme === "dark" ? "light" : "dark";
-      console.log("Setting new theme:", newTheme);
       return newTheme;
     });
   };
@@ -84,11 +69,3 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     </ThemeContext.Provider>
   );
 }
-
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
-};

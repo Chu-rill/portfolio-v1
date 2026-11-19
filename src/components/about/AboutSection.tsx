@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { MapPin, Calendar, Award, Download, Sparkles } from "lucide-react";
+import { MapPin, Calendar, Award, Download } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
 import type { Profile } from "../../types";

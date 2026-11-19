@@ -12,7 +12,7 @@ export function SectionHeader({ title, subtitle, center = false, className = '' 
         {title}
       </h2>
       {subtitle && (
-        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl ${center ? 'mx-auto' : ''}">
+        <p className={`text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl ${center ? 'mx-auto' : ''}`}>
           {subtitle}
         </p>
       )}

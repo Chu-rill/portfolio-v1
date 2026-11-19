@@ -6,7 +6,6 @@ export interface Profile {
   bio: string;
   email: string;
   phone?: string;
-  availability: string;
   yearsExperience: number;
   image?: string;
   resume?: string;
@@ -84,4 +83,16 @@ export interface Certification {
   skills?: string[];
   logo?: string;
   featured: boolean;
+}
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  date: string; // YYYY-MM-DD
+  tags: string[];
+  cover?: string;
+  draft: boolean;
+  readingTime: number; // minutes
+  content: string; // markdown body without frontmatter
 }

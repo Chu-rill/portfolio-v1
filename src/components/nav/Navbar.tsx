@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Container } from "../common/Container";
 import { ThemeToggle } from "./ThemeToggle";
+import { scrollToId } from "../../lib/scroll";
 
 interface NavLink {
   name: string;
@@ -14,6 +16,7 @@ const navLinks: NavLink[] = [
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
   // { name: "Certifications", href: "#certifications" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -21,13 +24,23 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === "/";
+
+  const isActive = (href: string) =>
+    href.startsWith("/")
+      ? location.pathname.startsWith(href)
+      : isHome && activeSection === href.substring(1);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Update active section based on scroll position
-      const sections = navLinks.map((link) => link.href.substring(1));
+      const sections = navLinks
+        .filter((link) => link.href.startsWith("#"))
+        .map((link) => link.href.substring(1));
       sections.unshift("hero"); // Add hero section
 
       for (const section of sections) {
@@ -51,14 +64,20 @@ export function Navbar() {
   }, []);
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      const offset = 80; // Account for fixed navbar
-      const top =
-        element.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: "smooth" });
-    }
     setIsMobileMenuOpen(false);
+    if (href.startsWith("/")) {
+      navigate(href);
+    } else if (isHome) {
+      scrollToId(href.substring(1));
+    } else {
+      // Home reads the hash on mount and scrolls to the section.
+      navigate(`/${href}`);
+    }
+  };
+
+  const goHome = () => {
+    if (isHome) window.scrollTo({ top: 0, behavior: "smooth" });
+    else navigate("/");
   };
 
   return (
@@ -73,7 +92,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onClick={goHome}
               className="text-xl font-bold text-gray-900 dark:text-white hover:text-brand-500 dark:hover:text-brand-400 transition-colors flex items-center "
             >
               CD <p className=" ml-4">Churchill Daniel</p>
@@ -89,7 +108,7 @@ export function Navbar() {
                 className={`
                   text-sm font-medium transition-colors duration-200 cursor-pointer
                   ${
-                    activeSection === link.href.substring(1)
+                    isActive(link.href)
                       ? "text-brand-500 dark:text-brand-400"
                       : "text-gray-700 dark:text-gray-300 hover:text-brand-500 dark:hover:text-brand-400"
                   }
@@ -128,7 +147,7 @@ export function Navbar() {
                 className={`
                   block w-full text-left px-4 py-2 text-base font-medium transition-colors
                   ${
-                    activeSection === link.href.substring(1)
+                    isActive(link.href)
                       ? "text-brand-500 dark:text-brand-400 "
                       : "text-gray-700 dark:text-gray-300 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-gray-50 dark:hover:bg-gray-800/50"
                   }

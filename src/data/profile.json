@@ -1,18 +1,17 @@
 {
-  "name": "Churchill ",
+  "name": "Churchill Daniel",
   "role": "Software Developer",
   "location": "Hamilton, ON",
-  "tagline": "I build fast,scalable, delightful web applications that users love.",
+  "tagline": "I build fast, scalable, delightful web applications that users love.",
   "bio": "A software developer who turns ideas into production-ready web, SaaS, and AI products. I focus on clean architecture, performance, and developer experience.",
   "email": "churchilldaniel687@gmail.com",
   "phone": "+1 (613) 355-0154",
   "yearsExperience": 3,
-  "image": "/images/profile2.png",
+  "image": "/images/profile2.webp",
   "resume": "/Resume.pdf",
   "socials": {
     "github": "https://github.com/Chu-rill",
     "linkedin": "https://www.linkedin.com/in/churchill-daniel/",
-    "x": "https://x.com/chu_rill",
-    "website": "https://yourname.dev"
+    "x": "https://x.com/chu_rill"
   }
 }

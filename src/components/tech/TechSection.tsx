@@ -91,7 +91,7 @@ function SkillCategory({
 }: {
   category: string;
   skills: Skill[];
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
 }) {
   return (
     <motion.div variants={fadeInUp} className="mb-12">

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Eye, Clock, Star } from "lucide-react";
+import { ExternalLink, Github, Eye, Clock } from "lucide-react";
 import { Container } from "../common/Container";
 import { SectionHeader } from "../common/SectionHeader";
 import type { Project } from "../../types";
