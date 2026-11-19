@@ -86,7 +86,7 @@ export function ContactForm({ profile }: ContactFormProps) {
   ].filter((link) => link.url);
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white dark:from-background-dark to-gray-50 dark:to-gray-900/50 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-gradient-to-b from-transparent to-gray-50/60 dark:to-gray-900/30 relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl" />

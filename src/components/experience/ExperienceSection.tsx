@@ -181,7 +181,7 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
   });
 
   return (
-    <section id="experience" className="py-12 md:py-24 bg-white dark:bg-background-dark">
+    <section id="experience" className="py-12 md:py-24">
       <Container>
         <m.div
           initial="initial"

@@ -187,7 +187,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
   return (
     <section
       id="projects"
-      className="py-12 md:py-24 bg-white dark:bg-background-dark"
+      className="py-12 md:py-24"
     >
       <Container>
         <m.div

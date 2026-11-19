@@ -141,7 +141,7 @@ export function TechSection({ skills }: { skills: Skill[] }) {
   const categoryOrder = ["languages", "frameworks", "tools", "database"];
 
   return (
-    <section id="skills" className="py-12 md:py-24 bg-gray-50 dark:bg-gray-900/50">
+    <section id="skills" className="py-12 md:py-24 bg-gray-50/60 dark:bg-gray-900/30">
       <Container>
         <m.div
           initial="initial"

@@ -99,7 +99,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gray-50 dark:bg-gray-900/50">
+    <section id="about" className="py-24 bg-gray-50/60 dark:bg-gray-900/30">
       <Container>
         <m.div
           initial="initial"

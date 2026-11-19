@@ -20,7 +20,7 @@ export function BlogPreview({ posts }: BlogPreviewProps) {
   if (posts.length === 0) return null;
 
   return (
-    <section id="blog" className="py-12 md:py-24 bg-white dark:bg-background-dark">
+    <section id="blog" className="py-12 md:py-24">
       <Container>
         <m.div
           initial="initial"

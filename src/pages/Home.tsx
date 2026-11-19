@@ -10,6 +10,7 @@ import { ExperienceSection } from "../components/experience/ExperienceSection";
 import { ContactForm } from "../components/contact/ContactForm";
 import { Footer } from "../components/footer/Footer";
 import { ScrollToTop } from "../components/common/ScrollToTop";
+import { ParticleBackground } from "../components/common/ParticleBackground";
 import { BlogPreview } from "../components/blog/BlogPreview";
 import { scrollToId } from "../lib/scroll";
 import { getAllPosts } from "../lib/blog";
@@ -110,10 +111,12 @@ export function Home() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-white dark:bg-background-dark">
+      {/* isolate: the fixed particle layer stacks above this background but below the content */}
+      <div className="relative isolate min-h-screen bg-white dark:bg-background-dark">
+        <ParticleBackground />
         <Navbar />
 
-        <main>
+        <main className="relative z-10">
           <Hero profile={profile} />
           <AboutSection profile={profile} />
           <ProjectsGrid projects={projects} />
@@ -124,7 +127,9 @@ export function Home() {
           <ContactForm profile={profile} />
         </main>
 
-        <Footer profile={profile} />
+        <div className="relative z-10">
+          <Footer profile={profile} />
+        </div>
         <ScrollToTop />
       </div>
     </>
