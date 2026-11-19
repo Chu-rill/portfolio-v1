@@ -1,0 +1,48 @@
+// Plain TypeScript with no Vite or browser APIs: used by the app (src/lib/blog.ts)
+// and by the build step that generates link-preview pages (vite-plugins/blogPreviews.ts).
+import type { BlogPost } from "../types";
+
+const WORDS_PER_MINUTE = 200;
+
+// Minimal frontmatter parser: supports `key: value` and `key: [a, b, c]`.
+function parseFrontmatter(raw: string) {
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if (!match) return { data: {} as Record<string, string | string[]>, content: raw };
+
+  const data: Record<string, string | string[]> = {};
+  for (const line of match[1].split(/\r?\n/)) {
+    const idx = line.indexOf(":");
+    if (idx === -1) continue;
+    const key = line.slice(0, idx).trim();
+    let value = line.slice(idx + 1).trim();
+
+    if (value.startsWith("[") && value.endsWith("]")) {
+      data[key] = value
+        .slice(1, -1)
+        .split(",")
+        .map((v) => v.trim().replace(/^["']|["']$/g, ""))
+        .filter(Boolean);
+    } else {
+      value = value.replace(/^["']|["']$/g, "");
+      data[key] = value;
+    }
+  }
+  return { data, content: match[2] };
+}
+
+export function parsePost(slug: string, raw: string): BlogPost {
+  const { data, content } = parseFrontmatter(raw);
+  const words = content.trim().split(/\s+/).length;
+
+  return {
+    slug,
+    title: (data.title as string) ?? slug,
+    description: (data.description as string) ?? "",
+    date: (data.date as string) ?? "",
+    tags: (data.tags as string[]) ?? [],
+    cover: data.cover as string | undefined,
+    draft: data.draft === "true",
+    readingTime: Math.max(1, Math.round(words / WORDS_PER_MINUTE)),
+    content,
+  };
+}

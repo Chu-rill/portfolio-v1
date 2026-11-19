@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { m } from "framer-motion";
 import {
   ArrowDown,
@@ -9,13 +10,24 @@ import {
   Twitter,
 } from "lucide-react";
 import { Container } from "../common/Container";
+import { useTheme } from "../../theme/themeContext";
 import type { Profile } from "../../types";
+
+// WebGL particle field: loaded after the hero text so it never delays first paint.
+const Antigravity = lazy(() => import("../common/Antigravity/Antigravity"));
+
+// Matches the blue → purple of the name gradient (brand-500 → purple-600).
+const PARTICLE_COLORS = ["#60A5FA", "#818CF8", "#A855F7"];
 
 interface HeroProps {
   profile: Profile;
 }
 
 export function Hero({ profile }: HeroProps) {
+  const { theme } = useTheme();
+  // Fewer particles on phones: less GPU work and a less crowded small screen.
+  const isSmallScreen =
+    typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -58,13 +70,21 @@ export function Hero({ profile }: HeroProps) {
       id="hero"
       className="min-h-screen flex items-center justify-center bg-white dark:bg-background-dark relative overflow-hidden"
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-80 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute -bottom-40 -left-80 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
+      {/* Interactive particle background. It tracks the cursor via window
+          listeners, so it can sit under the content without blocking clicks. */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <Suspense fallback={null}>
+          <Antigravity
+            colors={PARTICLE_COLORS}
+            count={isSmallScreen ? 600 : 1200}
+            magnetRadius={isSmallScreen ? 7 : 9}
+            ringRadius={isSmallScreen ? 5 : 7}
+            particleSize={0.9}
+            ambient={0.2}
+            lightMode={theme === "light"}
+            opacity={theme === "light" ? 0.7 : 0.85}
+          />
+        </Suspense>
       </div>
 
       <Container className="relative z-10 text-center">

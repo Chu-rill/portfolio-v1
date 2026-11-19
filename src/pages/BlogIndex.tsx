@@ -49,6 +49,9 @@ export function BlogIndex() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`Blog - ${profile.name.trim()}`} />
+        <meta property="og:url" content={`${window.location.origin}/blog`} />
+        <meta property="og:image" content={`${window.location.origin}/og/blog.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
       <div className="min-h-screen flex flex-col bg-white dark:bg-background-dark">

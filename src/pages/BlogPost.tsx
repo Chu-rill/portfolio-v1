@@ -10,6 +10,7 @@ import { Footer } from "../components/footer/Footer";
 import { Container } from "../components/common/Container";
 import { ScrollToTop } from "../components/common/ScrollToTop";
 import { CodeBlock } from "../components/blog/CodeBlock";
+import { ShareButton } from "../components/blog/ShareButton";
 import { formatPostDate, getAllPosts, getPostBySlug } from "../lib/blog";
 import { NotFound } from "./NotFound";
 import profileData from "../data/profile.json";
@@ -35,6 +36,11 @@ export function BlogPost() {
   const older = posts[index + 1];
 
   const author = profile.name.trim();
+  const url = `${window.location.origin}/blog/${post.slug}`;
+  const image = new URL(
+    post.cover ?? `/og/${post.slug}.png`,
+    window.location.origin,
+  ).href;
 
   return (
     <>
@@ -47,7 +53,10 @@ export function BlogPost() {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.description} />
-        {post.cover && <meta property="og:image" content={post.cover} />}
+        <link rel="canonical" href={url} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={image} />
+        <meta name="twitter:image" content={image} />
         <meta property="article:published_time" content={post.date} />
         {post.tags.map((tag) => (
           <meta key={tag} property="article:tag" content={tag} />
@@ -90,24 +99,29 @@ export function BlogPost() {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
                   {post.title}
                 </h1>
-                <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-                  <span className="inline-flex items-center gap-1.5">
-                    <Calendar className="h-4 w-4" />
-                    <time dateTime={post.date}>{formatPostDate(post.date)}</time>
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Clock className="h-4 w-4" />
-                    {post.readingTime} min read
-                  </span>
-                  {post.tags.map((tag) => (
-                    <Link
-                      key={tag}
-                      to={`/blog?tag=${encodeURIComponent(tag)}`}
-                      className="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 hover:bg-brand-500 hover:text-white transition-colors"
-                    >
-                      {tag}
-                    </Link>
-                  ))}
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                    <span className="inline-flex items-center gap-1.5">
+                      <Calendar className="h-4 w-4" />
+                      <time dateTime={post.date}>
+                        {formatPostDate(post.date)}
+                      </time>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <Clock className="h-4 w-4" />
+                      {post.readingTime} min read
+                    </span>
+                    {post.tags.map((tag) => (
+                      <Link
+                        key={tag}
+                        to={`/blog?tag=${encodeURIComponent(tag)}`}
+                        className="px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 hover:bg-brand-500 hover:text-white transition-colors"
+                      >
+                        {tag}
+                      </Link>
+                    ))}
+                  </div>
+                  <ShareButton post={post} />
                 </div>
                 {post.cover && (
                   <img
@@ -127,7 +141,12 @@ export function BlogPost() {
                       href.startsWith("/") ? (
                         <Link to={href}>{children}</Link>
                       ) : (
-                        <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          {...props}
+                        >
                           {children}
                         </a>
                       ),
@@ -136,6 +155,13 @@ export function BlogPost() {
                 >
                   {post.content}
                 </ReactMarkdown>
+              </div>
+
+              <div className="mt-12 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-surface-dark px-6 py-5">
+                <p className="font-semibold text-gray-900 dark:text-white">
+                  Enjoyed this post? Pass it on.
+                </p>
+                <ShareButton post={post} openUpward label="Share this post" />
               </div>
             </m.article>
 
